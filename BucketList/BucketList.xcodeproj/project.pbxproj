@@ -12,6 +12,10 @@
 		953ACE822383230A00C8FA44 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953ACE812383230A00C8FA44 /* SignUpViewController.swift */; };
 		953ACE852383362800C8FA44 /* Exo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 953ACE842383362800C8FA44 /* Exo-Medium.ttf */; };
 		953ACE87238336F200C8FA44 /* Exo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 953ACE86238336F200C8FA44 /* Exo-SemiBold.ttf */; };
+		953ACE892383483500C8FA44 /* BLinfoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953ACE882383483500C8FA44 /* BLinfoStoryboard.storyboard */; };
+		953ACE8B23834D1D00C8FA44 /* BLinfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953ACE8A23834D1D00C8FA44 /* BLinfoViewController.swift */; };
+		953ACE8D2383560500C8FA44 /* BLshareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953ACE8C2383560500C8FA44 /* BLshareViewController.swift */; };
+		953ACE8F2383577A00C8FA44 /* BLitemInfoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953ACE8E2383577A00C8FA44 /* BLitemInfoStoryboard.storyboard */; };
 		A6FD02E023831006007F0DB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD02DF23831006007F0DB7 /* AppDelegate.swift */; };
 		A6FD02E223831006007F0DB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD02E123831006007F0DB7 /* SceneDelegate.swift */; };
 		A6FD02E423831006007F0DB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD02E323831006007F0DB7 /* ViewController.swift */; };
@@ -30,6 +34,10 @@
 		953ACE812383230A00C8FA44 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		953ACE842383362800C8FA44 /* Exo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Medium.ttf"; sourceTree = "<group>"; };
 		953ACE86238336F200C8FA44 /* Exo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-SemiBold.ttf"; sourceTree = "<group>"; };
+		953ACE882383483500C8FA44 /* BLinfoStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BLinfoStoryboard.storyboard; sourceTree = "<group>"; };
+		953ACE8A23834D1D00C8FA44 /* BLinfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLinfoViewController.swift; sourceTree = "<group>"; };
+		953ACE8C2383560500C8FA44 /* BLshareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLshareViewController.swift; sourceTree = "<group>"; };
+		953ACE8E2383577A00C8FA44 /* BLitemInfoStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BLitemInfoStoryboard.storyboard; sourceTree = "<group>"; };
 		A6FD02DC23831006007F0DB7 /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6FD02DF23831006007F0DB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6FD02E123831006007F0DB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +97,11 @@
 				A6FD02E123831006007F0DB7 /* SceneDelegate.swift */,
 				953ACE7F238322FB00C8FA44 /* SignInViewController.swift */,
 				953ACE812383230A00C8FA44 /* SignUpViewController.swift */,
+				953ACE8A23834D1D00C8FA44 /* BLinfoViewController.swift */,
+				953ACE8C2383560500C8FA44 /* BLshareViewController.swift */,
 				A6FD02E323831006007F0DB7 /* ViewController.swift */,
+				953ACE882383483500C8FA44 /* BLinfoStoryboard.storyboard */,
+				953ACE8E2383577A00C8FA44 /* BLitemInfoStoryboard.storyboard */,
 				A6FD02E523831006007F0DB7 /* Login.storyboard */,
 				A6FD02F323831376007F0DB7 /* MyBucketList.storyboard */,
 				A6FD02E823831007007F0DB7 /* Assets.xcassets */,
@@ -176,9 +188,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				953ACE8F2383577A00C8FA44 /* BLitemInfoStoryboard.storyboard in Resources */,
 				953ACE852383362800C8FA44 /* Exo-Medium.ttf in Resources */,
 				A6FD02EC23831007007F0DB7 /* LaunchScreen.storyboard in Resources */,
 				953ACE87238336F200C8FA44 /* Exo-SemiBold.ttf in Resources */,
+				953ACE892383483500C8FA44 /* BLinfoStoryboard.storyboard in Resources */,
 				A6FD02E923831007007F0DB7 /* Assets.xcassets in Resources */,
 				A6FD02F423831376007F0DB7 /* MyBucketList.storyboard in Resources */,
 				A6FD02E723831006007F0DB7 /* Login.storyboard in Resources */,
@@ -221,7 +235,9 @@
 				A6FD02E423831006007F0DB7 /* ViewController.swift in Sources */,
 				A6FD030223834118007F0DB7 /* BucketListItem.swift in Sources */,
 				A6FD02E023831006007F0DB7 /* AppDelegate.swift in Sources */,
+				953ACE8B23834D1D00C8FA44 /* BLinfoViewController.swift in Sources */,
 				A6FD02E223831006007F0DB7 /* SceneDelegate.swift in Sources */,
+				953ACE8D2383560500C8FA44 /* BLshareViewController.swift in Sources */,
 				953ACE822383230A00C8FA44 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

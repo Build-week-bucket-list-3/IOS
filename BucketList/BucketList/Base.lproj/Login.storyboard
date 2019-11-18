@@ -153,7 +153,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVY-0N-BmB">
-                                <rect key="frame" x="20" y="178" width="200.5" height="32"/>
+                                <rect key="frame" x="20" y="168" width="200.5" height="32"/>
                                 <fontDescription key="fontDescription" name="Exo-SemiBold" family="Exo" pointSize="24"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -292,7 +292,7 @@
                             <constraint firstItem="vOD-kO-o0R" firstAttribute="leading" secondItem="qcv-vc-MQw" secondAttribute="leading" constant="20" id="BZm-yV-fJA"/>
                             <constraint firstItem="dVY-0N-BmB" firstAttribute="leading" secondItem="qcv-vc-MQw" secondAttribute="leading" constant="20" id="JJI-qJ-oMN"/>
                             <constraint firstItem="dfk-sa-lIv" firstAttribute="top" secondItem="vOD-kO-o0R" secondAttribute="bottom" constant="20" id="Ktn-Zo-OdV"/>
-                            <constraint firstItem="dVY-0N-BmB" firstAttribute="top" secondItem="qcv-vc-MQw" secondAttribute="top" constant="90" id="aTe-p1-gyw"/>
+                            <constraint firstItem="dVY-0N-BmB" firstAttribute="top" secondItem="qcv-vc-MQw" secondAttribute="top" constant="80" id="aTe-p1-gyw"/>
                             <constraint firstItem="qcv-vc-MQw" firstAttribute="bottom" secondItem="Ztd-X4-Mna" secondAttribute="bottom" constant="70" id="gG1-Bc-lJX"/>
                             <constraint firstItem="qcv-vc-MQw" firstAttribute="trailing" secondItem="vOD-kO-o0R" secondAttribute="trailing" constant="20" id="gJ5-Tm-hYe"/>
                             <constraint firstItem="Ztd-X4-Mna" firstAttribute="leading" secondItem="qcv-vc-MQw" secondAttribute="leading" constant="20" id="jzY-MS-AiW"/>
