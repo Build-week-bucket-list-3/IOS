@@ -19,10 +19,7 @@
 		A6FD02E923831007007F0DB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6FD02E823831007007F0DB7 /* Assets.xcassets */; };
 		A6FD02EC23831007007F0DB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6FD02EA23831007007F0DB7 /* LaunchScreen.storyboard */; };
 		A6FD02F423831376007F0DB7 /* MyBucketList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6FD02F323831376007F0DB7 /* MyBucketList.storyboard */; };
-		A6FD02F6238324FD007F0DB7 /* BucketListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD02F5238324FD007F0DB7 /* BucketListTableViewController.swift */; };
-		A6FD02F8238325CC007F0DB7 /* CreateBucketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD02F7238325CC007F0DB7 /* CreateBucketListViewController.swift */; };
-		A6FD02FA23832658007F0DB7 /* BucketListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD02F923832658007F0DB7 /* BucketListItemViewController.swift */; };
-		A6FD0300238328A7007F0DB7 /* BuckListItemCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD02FF238328A7007F0DB7 /* BuckListItemCollectionViewController.swift */; };
+		A6FD030223834118007F0DB7 /* BucketListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD030123834118007F0DB7 /* BucketListItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,10 +39,7 @@
 		A6FD02EB23831007007F0DB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6FD02ED23831007007F0DB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6FD02F323831376007F0DB7 /* MyBucketList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyBucketList.storyboard; sourceTree = "<group>"; };
-		A6FD02F5238324FD007F0DB7 /* BucketListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListTableViewController.swift; sourceTree = "<group>"; };
-		A6FD02F7238325CC007F0DB7 /* CreateBucketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBucketListViewController.swift; sourceTree = "<group>"; };
-		A6FD02F923832658007F0DB7 /* BucketListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListItemViewController.swift; sourceTree = "<group>"; };
-		A6FD02FF238328A7007F0DB7 /* BuckListItemCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuckListItemCollectionViewController.swift; sourceTree = "<group>"; };
+		A6FD030123834118007F0DB7 /* BucketListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,13 +92,10 @@
 				A6FD02E323831006007F0DB7 /* ViewController.swift */,
 				A6FD02E523831006007F0DB7 /* Login.storyboard */,
 				A6FD02F323831376007F0DB7 /* MyBucketList.storyboard */,
-				A6FD02F923832658007F0DB7 /* BucketListItemViewController.swift */,
 				A6FD02E823831007007F0DB7 /* Assets.xcassets */,
 				A6FD02EA23831007007F0DB7 /* LaunchScreen.storyboard */,
 				A6FD02ED23831007007F0DB7 /* Info.plist */,
-				A6FD02F5238324FD007F0DB7 /* BucketListTableViewController.swift */,
-				A6FD02F7238325CC007F0DB7 /* CreateBucketListViewController.swift */,
-				A6FD02FF238328A7007F0DB7 /* BuckListItemCollectionViewController.swift */,
+				A6FD030123834118007F0DB7 /* BucketListItem.swift */,
 			);
 			path = BucketList;
 			sourceTree = "<group>";
@@ -228,16 +219,10 @@
 			files = (
 				953ACE80238322FB00C8FA44 /* SignInViewController.swift in Sources */,
 				A6FD02E423831006007F0DB7 /* ViewController.swift in Sources */,
-				A6FD02FA23832658007F0DB7 /* BucketListItemViewController.swift in Sources */,
-				A6FD0300238328A7007F0DB7 /* BuckListItemCollectionViewController.swift in Sources */,
+				A6FD030223834118007F0DB7 /* BucketListItem.swift in Sources */,
 				A6FD02E023831006007F0DB7 /* AppDelegate.swift in Sources */,
 				A6FD02E223831006007F0DB7 /* SceneDelegate.swift in Sources */,
-<<<<<<< HEAD
-				A6FD02F8238325CC007F0DB7 /* CreateBucketListViewController.swift in Sources */,
-				A6FD02F6238324FD007F0DB7 /* BucketListTableViewController.swift in Sources */,
-=======
 				953ACE822383230A00C8FA44 /* SignUpViewController.swift in Sources */,
->>>>>>> fa48fdefbca055424aaf8ddb44ed323afaf9e299
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
