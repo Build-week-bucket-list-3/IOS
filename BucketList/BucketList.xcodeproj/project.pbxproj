@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		7FE75E48FBE82E13A1275EE7 /* Pods_BucketList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44D14F9BE488E09F70203FA8 /* Pods_BucketList.framework */; };
+		953ACE80238322FB00C8FA44 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953ACE7F238322FB00C8FA44 /* SignInViewController.swift */; };
+		953ACE822383230A00C8FA44 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953ACE812383230A00C8FA44 /* SignUpViewController.swift */; };
 		A6FD02E023831006007F0DB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD02DF23831006007F0DB7 /* AppDelegate.swift */; };
 		A6FD02E223831006007F0DB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD02E123831006007F0DB7 /* SceneDelegate.swift */; };
 		A6FD02E423831006007F0DB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD02E323831006007F0DB7 /* ViewController.swift */; };
-		A6FD02E723831006007F0DB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6FD02E523831006007F0DB7 /* Main.storyboard */; };
+		A6FD02E723831006007F0DB7 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6FD02E523831006007F0DB7 /* Login.storyboard */; };
 		A6FD02E923831007007F0DB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6FD02E823831007007F0DB7 /* Assets.xcassets */; };
 		A6FD02EC23831007007F0DB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6FD02EA23831007007F0DB7 /* LaunchScreen.storyboard */; };
 		A6FD02F423831376007F0DB7 /* MyBucketList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6FD02F323831376007F0DB7 /* MyBucketList.storyboard */; };
@@ -21,11 +23,13 @@
 		289F55B22583061F7E5AE450 /* Pods-BucketList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BucketList.release.xcconfig"; path = "Target Support Files/Pods-BucketList/Pods-BucketList.release.xcconfig"; sourceTree = "<group>"; };
 		33C804B4D9FBA06A8F8E9401 /* Pods-BucketList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BucketList.debug.xcconfig"; path = "Target Support Files/Pods-BucketList/Pods-BucketList.debug.xcconfig"; sourceTree = "<group>"; };
 		44D14F9BE488E09F70203FA8 /* Pods_BucketList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BucketList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		953ACE7F238322FB00C8FA44 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		953ACE812383230A00C8FA44 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A6FD02DC23831006007F0DB7 /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6FD02DF23831006007F0DB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6FD02E123831006007F0DB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A6FD02E323831006007F0DB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A6FD02E623831006007F0DB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A6FD02E623831006007F0DB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		A6FD02E823831007007F0DB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6FD02EB23831007007F0DB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6FD02ED23831007007F0DB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,8 +71,10 @@
 			children = (
 				A6FD02DF23831006007F0DB7 /* AppDelegate.swift */,
 				A6FD02E123831006007F0DB7 /* SceneDelegate.swift */,
+				953ACE7F238322FB00C8FA44 /* SignInViewController.swift */,
+				953ACE812383230A00C8FA44 /* SignUpViewController.swift */,
 				A6FD02E323831006007F0DB7 /* ViewController.swift */,
-				A6FD02E523831006007F0DB7 /* Main.storyboard */,
+				A6FD02E523831006007F0DB7 /* Login.storyboard */,
 				A6FD02F323831376007F0DB7 /* MyBucketList.storyboard */,
 				A6FD02E823831007007F0DB7 /* Assets.xcassets */,
 				A6FD02EA23831007007F0DB7 /* LaunchScreen.storyboard */,
@@ -83,7 +89,6 @@
 				33C804B4D9FBA06A8F8E9401 /* Pods-BucketList.debug.xcconfig */,
 				289F55B22583061F7E5AE450 /* Pods-BucketList.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -157,7 +162,7 @@
 				A6FD02EC23831007007F0DB7 /* LaunchScreen.storyboard in Resources */,
 				A6FD02E923831007007F0DB7 /* Assets.xcassets in Resources */,
 				A6FD02F423831376007F0DB7 /* MyBucketList.storyboard in Resources */,
-				A6FD02E723831006007F0DB7 /* Main.storyboard in Resources */,
+				A6FD02E723831006007F0DB7 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,21 +198,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				953ACE80238322FB00C8FA44 /* SignInViewController.swift in Sources */,
 				A6FD02E423831006007F0DB7 /* ViewController.swift in Sources */,
 				A6FD02E023831006007F0DB7 /* AppDelegate.swift in Sources */,
 				A6FD02E223831006007F0DB7 /* SceneDelegate.swift in Sources */,
+				953ACE822383230A00C8FA44 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A6FD02E523831006007F0DB7 /* Main.storyboard */ = {
+		A6FD02E523831006007F0DB7 /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A6FD02E623831006007F0DB7 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 		A6FD02EA23831007007F0DB7 /* LaunchScreen.storyboard */ = {
