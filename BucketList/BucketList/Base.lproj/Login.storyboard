@@ -6,6 +6,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Exo-Medium.ttf">
+            <string>Exo-Medium</string>
+        </array>
+        <array key="Exo-SemiBold.ttf">
+            <string>Exo-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Bucket List-->
         <scene sceneID="tne-QT-ifu">
@@ -16,26 +24,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zo0-Ro-3n3">
-                                <rect key="frame" x="20" y="168" width="158" height="61"/>
+                                <rect key="frame" x="20" y="168" width="134" height="71"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWQ-mu-OMR">
-                                        <rect key="frame" x="0.0" y="0.0" width="53" height="20"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="75.5" height="32"/>
+                                        <fontDescription key="fontDescription" name="Exo-SemiBold" family="Exo" pointSize="24"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="vU0-O5-RFw">
-                                        <rect key="frame" x="0.0" y="28" width="158" height="33"/>
+                                        <rect key="frame" x="0.0" y="40" width="134" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVi-FI-qzG">
-                                                <rect key="frame" x="0.0" y="0.0" width="16" height="33"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="14" height="31"/>
+                                                <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QS5-2s-fVG">
-                                                <rect key="frame" x="20" y="0.0" width="138" height="33"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="18" y="0.0" width="116" height="31"/>
+                                                <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="14"/>
                                                 <state key="normal" title="create an account"/>
                                                 <connections>
                                                     <action selector="createAccountButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FqM-Rf-O6V"/>
@@ -47,16 +55,16 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HvM-UT-Dih">
-                                <rect key="frame" x="20" y="329" width="374" height="62.5"/>
+                                <rect key="frame" x="20" y="339" width="374" height="61"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfw-pt-0NB">
-                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="19"/>
+                                        <fontDescription key="fontDescription" name="Exo-SemiBold" family="Exo" pointSize="14"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jjH-cJ-hN0">
-                                        <rect key="frame" x="0.0" y="28.5" width="374" height="34"/>
+                                        <rect key="frame" x="0.0" y="27" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -71,16 +79,16 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="roV-YA-EAv">
-                                <rect key="frame" x="20" y="421.5" width="374" height="62.5"/>
+                                <rect key="frame" x="20" y="420" width="374" height="61"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xef-An-0u4">
-                                        <rect key="frame" x="0.0" y="0.0" width="74" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="63.5" height="19"/>
+                                        <fontDescription key="fontDescription" name="Exo-SemiBold" family="Exo" pointSize="14"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vXS-xJ-pFQ">
-                                        <rect key="frame" x="0.0" y="28.5" width="374" height="34"/>
+                                        <rect key="frame" x="0.0" y="27" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -96,11 +104,11 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hy0-Jo-Uvi">
                                 <rect key="frame" x="20" y="742" width="374" height="50"/>
-                                <color key="backgroundColor" red="0.17328825551111438" green="0.66620065133578987" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0078431372549019607" green="0.49803921568627452" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="XE5-j6-Ioz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="20"/>
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -117,7 +125,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HvM-UT-Dih" secondAttribute="trailing" constant="20" id="FwM-j9-IDi"/>
                             <constraint firstItem="HvM-UT-Dih" firstAttribute="top" secondItem="zo0-Ro-3n3" secondAttribute="bottom" constant="100" id="MQv-xT-uG6"/>
                             <constraint firstItem="roV-YA-EAv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NqK-mU-gYQ"/>
-                            <constraint firstItem="roV-YA-EAv" firstAttribute="top" secondItem="HvM-UT-Dih" secondAttribute="bottom" constant="30" id="QQV-5L-OMk"/>
+                            <constraint firstItem="roV-YA-EAv" firstAttribute="top" secondItem="HvM-UT-Dih" secondAttribute="bottom" constant="20" id="QQV-5L-OMk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hy0-Jo-Uvi" secondAttribute="bottom" constant="70" id="pZW-zG-90b"/>
                             <constraint firstItem="zo0-Ro-3n3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uvc-Po-IyR"/>
                             <constraint firstItem="HvM-UT-Dih" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="x2k-bp-AfR"/>
@@ -145,22 +153,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVY-0N-BmB">
-                                <rect key="frame" x="20" y="178" width="265.5" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="20" y="178" width="200.5" height="32"/>
+                                <fontDescription key="fontDescription" name="Exo-SemiBold" family="Exo" pointSize="24"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vOD-kO-o0R">
-                                <rect key="frame" x="20" y="269" width="374" height="63"/>
+                                <rect key="frame" x="20" y="271" width="374" height="61"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3N-uQ-J1A">
-                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="19"/>
+                                        <fontDescription key="fontDescription" name="Exo-SemiBold" family="Exo" pointSize="14"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sVD-KZ-ykG">
-                                        <rect key="frame" x="0.0" y="28.5" width="374" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="27" width="374" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="guN-aS-v0W"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -169,7 +180,6 @@
                                     <constraint firstItem="sVD-KZ-ykG" firstAttribute="leading" secondItem="vOD-kO-o0R" secondAttribute="leading" id="0c5-ni-5Wm"/>
                                     <constraint firstItem="sVD-KZ-ykG" firstAttribute="top" secondItem="K3N-uQ-J1A" secondAttribute="bottom" constant="8" id="Buv-mU-X10"/>
                                     <constraint firstAttribute="trailing" secondItem="sVD-KZ-ykG" secondAttribute="trailing" id="DFV-b9-9RR"/>
-                                    <constraint firstAttribute="bottom" secondItem="sVD-KZ-ykG" secondAttribute="bottom" id="G6B-vn-U3g"/>
                                     <constraint firstItem="K3N-uQ-J1A" firstAttribute="leading" secondItem="vOD-kO-o0R" secondAttribute="leading" id="UFz-E9-jZs"/>
                                     <constraint firstItem="K3N-uQ-J1A" firstAttribute="top" secondItem="vOD-kO-o0R" secondAttribute="top" id="iNr-3O-iLg"/>
                                 </constraints>
@@ -179,13 +189,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOf-mL-I1E">
-                                        <rect key="frame" x="0.0" y="0.0" width="108" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="94" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="Exo-SemiBold" family="Exo" pointSize="14"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="meR-UC-2As">
                                         <rect key="frame" x="0.0" y="28.5" width="374" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="OG0-Pf-Z69"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -205,13 +218,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QM1-RO-zmu">
-                                        <rect key="frame" x="0.0" y="0.0" width="74" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="63.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="Exo-SemiBold" family="Exo" pointSize="14"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KGp-VH-syE">
                                         <rect key="frame" x="0.0" y="28.5" width="374" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="vOm-15-Kly"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -231,13 +247,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4b9-iS-6X5">
-                                        <rect key="frame" x="0.0" y="0.0" width="139.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="Exo-SemiBold" family="Exo" pointSize="14"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cdd-LF-8lC">
                                         <rect key="frame" x="0.0" y="28.5" width="374" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="Fb2-dw-Kok"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -254,11 +273,11 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ztd-X4-Mna">
                                 <rect key="frame" x="20" y="742" width="374" height="50"/>
-                                <color key="backgroundColor" red="0.17328825549999999" green="0.66620065129999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0078431372549019607" green="0.49803921568627452" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="N9c-Si-23c"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="20"/>
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -273,7 +292,6 @@
                             <constraint firstItem="vOD-kO-o0R" firstAttribute="leading" secondItem="qcv-vc-MQw" secondAttribute="leading" constant="20" id="BZm-yV-fJA"/>
                             <constraint firstItem="dVY-0N-BmB" firstAttribute="leading" secondItem="qcv-vc-MQw" secondAttribute="leading" constant="20" id="JJI-qJ-oMN"/>
                             <constraint firstItem="dfk-sa-lIv" firstAttribute="top" secondItem="vOD-kO-o0R" secondAttribute="bottom" constant="20" id="Ktn-Zo-OdV"/>
-                            <constraint firstItem="vOD-kO-o0R" firstAttribute="top" secondItem="dVY-0N-BmB" secondAttribute="bottom" constant="50" id="TzP-OX-rkE"/>
                             <constraint firstItem="dVY-0N-BmB" firstAttribute="top" secondItem="qcv-vc-MQw" secondAttribute="top" constant="90" id="aTe-p1-gyw"/>
                             <constraint firstItem="qcv-vc-MQw" firstAttribute="bottom" secondItem="Ztd-X4-Mna" secondAttribute="bottom" constant="70" id="gG1-Bc-lJX"/>
                             <constraint firstItem="qcv-vc-MQw" firstAttribute="trailing" secondItem="vOD-kO-o0R" secondAttribute="trailing" constant="20" id="gJ5-Tm-hYe"/>
