@@ -13,6 +13,7 @@
 		A6FD02E723831006007F0DB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6FD02E523831006007F0DB7 /* Main.storyboard */; };
 		A6FD02E923831007007F0DB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6FD02E823831007007F0DB7 /* Assets.xcassets */; };
 		A6FD02EC23831007007F0DB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6FD02EA23831007007F0DB7 /* LaunchScreen.storyboard */; };
+		A6FD02F423831376007F0DB7 /* MyBucketList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6FD02F323831376007F0DB7 /* MyBucketList.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A6FD02E823831007007F0DB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6FD02EB23831007007F0DB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6FD02ED23831007007F0DB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6FD02F323831376007F0DB7 /* MyBucketList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyBucketList.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				A6FD02E123831006007F0DB7 /* SceneDelegate.swift */,
 				A6FD02E323831006007F0DB7 /* ViewController.swift */,
 				A6FD02E523831006007F0DB7 /* Main.storyboard */,
+				A6FD02F323831376007F0DB7 /* MyBucketList.storyboard */,
 				A6FD02E823831007007F0DB7 /* Assets.xcassets */,
 				A6FD02EA23831007007F0DB7 /* LaunchScreen.storyboard */,
 				A6FD02ED23831007007F0DB7 /* Info.plist */,
@@ -127,6 +130,7 @@
 			files = (
 				A6FD02EC23831007007F0DB7 /* LaunchScreen.storyboard in Resources */,
 				A6FD02E923831007007F0DB7 /* Assets.xcassets in Resources */,
+				A6FD02F423831376007F0DB7 /* MyBucketList.storyboard in Resources */,
 				A6FD02E723831006007F0DB7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
