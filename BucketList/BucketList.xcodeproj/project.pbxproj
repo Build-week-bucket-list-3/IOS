@@ -18,12 +18,15 @@
 		953ACE8F2383577A00C8FA44 /* BLitemInfoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953ACE8E2383577A00C8FA44 /* BLitemInfoStoryboard.storyboard */; };
 		A6FD02E023831006007F0DB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD02DF23831006007F0DB7 /* AppDelegate.swift */; };
 		A6FD02E223831006007F0DB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD02E123831006007F0DB7 /* SceneDelegate.swift */; };
-		A6FD02E423831006007F0DB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD02E323831006007F0DB7 /* ViewController.swift */; };
 		A6FD02E723831006007F0DB7 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6FD02E523831006007F0DB7 /* Login.storyboard */; };
 		A6FD02E923831007007F0DB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6FD02E823831007007F0DB7 /* Assets.xcassets */; };
 		A6FD02EC23831007007F0DB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6FD02EA23831007007F0DB7 /* LaunchScreen.storyboard */; };
-		A6FD02F423831376007F0DB7 /* MyBucketList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6FD02F323831376007F0DB7 /* MyBucketList.storyboard */; };
-		A6FD030223834118007F0DB7 /* BucketListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD030123834118007F0DB7 /* BucketListItem.swift */; };
+		A6FD02F423831376007F0DB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6FD02F323831376007F0DB7 /* Main.storyboard */; };
+		A6FD030523834700007F0DB7 /* BucketListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD030423834700007F0DB7 /* BucketListTableViewController.swift */; };
+		A6FD030823834732007F0DB7 /* CreateBucketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD030723834732007F0DB7 /* CreateBucketListViewController.swift */; };
+		A6FD030A23834750007F0DB7 /* BucketListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD030923834750007F0DB7 /* BucketListItemViewController.swift */; };
+		A6FD030D23834784007F0DB7 /* CreateBucketListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD030C23834784007F0DB7 /* CreateBucketListItemViewController.swift */; };
+		A6FD030F23834AB4007F0DB7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD030E23834AB4007F0DB7 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,13 +44,16 @@
 		A6FD02DC23831006007F0DB7 /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6FD02DF23831006007F0DB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6FD02E123831006007F0DB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A6FD02E323831006007F0DB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A6FD02E623831006007F0DB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		A6FD02E823831007007F0DB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6FD02EB23831007007F0DB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6FD02ED23831007007F0DB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A6FD02F323831376007F0DB7 /* MyBucketList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyBucketList.storyboard; sourceTree = "<group>"; };
-		A6FD030123834118007F0DB7 /* BucketListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListItem.swift; sourceTree = "<group>"; };
+		A6FD02F323831376007F0DB7 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A6FD030423834700007F0DB7 /* BucketListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListTableViewController.swift; sourceTree = "<group>"; };
+		A6FD030723834732007F0DB7 /* CreateBucketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateBucketListViewController.swift; path = BucketList/CreateBucketListViewController.swift; sourceTree = SOURCE_ROOT; };
+		A6FD030923834750007F0DB7 /* BucketListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListItemViewController.swift; sourceTree = "<group>"; };
+		A6FD030C23834784007F0DB7 /* CreateBucketListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateBucketListItemViewController.swift; path = BucketList/CreateBucketListItemViewController.swift; sourceTree = SOURCE_ROOT; };
+		A6FD030E23834AB4007F0DB7 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = BucketList/MenuViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,19 +103,50 @@
 				A6FD02E123831006007F0DB7 /* SceneDelegate.swift */,
 				953ACE7F238322FB00C8FA44 /* SignInViewController.swift */,
 				953ACE812383230A00C8FA44 /* SignUpViewController.swift */,
+<<<<<<< HEAD
 				953ACE8A23834D1D00C8FA44 /* BLinfoViewController.swift */,
 				953ACE8C2383560500C8FA44 /* BLshareViewController.swift */,
 				A6FD02E323831006007F0DB7 /* ViewController.swift */,
 				953ACE882383483500C8FA44 /* BLinfoStoryboard.storyboard */,
 				953ACE8E2383577A00C8FA44 /* BLitemInfoStoryboard.storyboard */,
+=======
+				A6FD030423834700007F0DB7 /* BucketListTableViewController.swift */,
+				A6FD030723834732007F0DB7 /* CreateBucketListViewController.swift */,
+				A6FD030E23834AB4007F0DB7 /* MenuViewController.swift */,
+				A6FD030923834750007F0DB7 /* BucketListItemViewController.swift */,
+				A6FD030C23834784007F0DB7 /* CreateBucketListItemViewController.swift */,
+				A6FD03032383462E007F0DB7 /* Login View Controllers */,
+				A6FD030623834706007F0DB7 /* Buket List View Controllers */,
+				A6FD030B2383475E007F0DB7 /* Bucket List Item View Controllers */,
+>>>>>>> 7e0dac24e3633ab6b3dd05c2df316015d5c9ee58
 				A6FD02E523831006007F0DB7 /* Login.storyboard */,
-				A6FD02F323831376007F0DB7 /* MyBucketList.storyboard */,
+				A6FD02F323831376007F0DB7 /* Main.storyboard */,
 				A6FD02E823831007007F0DB7 /* Assets.xcassets */,
 				A6FD02EA23831007007F0DB7 /* LaunchScreen.storyboard */,
 				A6FD02ED23831007007F0DB7 /* Info.plist */,
-				A6FD030123834118007F0DB7 /* BucketListItem.swift */,
 			);
 			path = BucketList;
+			sourceTree = "<group>";
+		};
+		A6FD03032383462E007F0DB7 /* Login View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Login View Controllers";
+			sourceTree = "<group>";
+		};
+		A6FD030623834706007F0DB7 /* Buket List View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Buket List View Controllers";
+			sourceTree = "<group>";
+		};
+		A6FD030B2383475E007F0DB7 /* Bucket List Item View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Bucket List Item View Controllers";
 			sourceTree = "<group>";
 		};
 		F148AF82231D581CB12F120C /* Pods */ = {
@@ -194,7 +231,7 @@
 				953ACE87238336F200C8FA44 /* Exo-SemiBold.ttf in Resources */,
 				953ACE892383483500C8FA44 /* BLinfoStoryboard.storyboard in Resources */,
 				A6FD02E923831007007F0DB7 /* Assets.xcassets in Resources */,
-				A6FD02F423831376007F0DB7 /* MyBucketList.storyboard in Resources */,
+				A6FD02F423831376007F0DB7 /* Main.storyboard in Resources */,
 				A6FD02E723831006007F0DB7 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,14 +268,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6FD030A23834750007F0DB7 /* BucketListItemViewController.swift in Sources */,
+				A6FD030823834732007F0DB7 /* CreateBucketListViewController.swift in Sources */,
 				953ACE80238322FB00C8FA44 /* SignInViewController.swift in Sources */,
-				A6FD02E423831006007F0DB7 /* ViewController.swift in Sources */,
-				A6FD030223834118007F0DB7 /* BucketListItem.swift in Sources */,
+				A6FD030523834700007F0DB7 /* BucketListTableViewController.swift in Sources */,
+				A6FD030F23834AB4007F0DB7 /* MenuViewController.swift in Sources */,
 				A6FD02E023831006007F0DB7 /* AppDelegate.swift in Sources */,
 				953ACE8B23834D1D00C8FA44 /* BLinfoViewController.swift in Sources */,
 				A6FD02E223831006007F0DB7 /* SceneDelegate.swift in Sources */,
 				953ACE8D2383560500C8FA44 /* BLshareViewController.swift in Sources */,
 				953ACE822383230A00C8FA44 /* SignUpViewController.swift in Sources */,
+				A6FD030D23834784007F0DB7 /* CreateBucketListItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
