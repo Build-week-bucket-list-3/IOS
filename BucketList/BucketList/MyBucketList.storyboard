@@ -158,8 +158,8 @@
                                     <segue destination="ajF-j1-UBC" kind="show" id="1jN-8I-h4J"/>
                                 </connections>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xt5-oA-siD">
-                                <rect key="frame" x="0.0" y="355" width="240" height="128"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xt5-oA-siD" customClass="BucketListItem" customModule="BucketList" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="355" width="414" height="507"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sOg-aL-sc0">
@@ -195,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psM-d0-GgX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1887" y="901"/>
+            <point key="canvasLocation" x="1886.9565217391305" y="900.66964285714278"/>
         </scene>
         <!--Create a Bucket List Item-->
         <scene sceneID="Cjm-OF-Tco">

@@ -1,0 +1,22 @@
+//
+//  BucketListItem.swift
+//  BucketList
+//
+//  Created by Gi Pyo Kim on 11/18/19.
+//  Copyright © 2019 GIPGIP Studio. All rights reserved.
+//
+
+import UIKit
+
+class BucketListItem: UICollectionView {
+
+    /*
+    // Only override draw() if you perform custom drawing.
+    // An empty implementation adversely affects performance during animation.
+    override func draw(_ rect: CGRect) {
+        // Drawing code
+    }
+    */
+    
+    
+}
