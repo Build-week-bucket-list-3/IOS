@@ -93,6 +93,13 @@
 				953ACE83238335A500C8FA44 /* Fonts */,
 				A6FD02DF23831006007F0DB7 /* AppDelegate.swift */,
 				A6FD02E123831006007F0DB7 /* SceneDelegate.swift */,
+				953ACE7F238322FB00C8FA44 /* SignInViewController.swift */,
+				953ACE812383230A00C8FA44 /* SignUpViewController.swift */,
+				A6FD030423834700007F0DB7 /* BucketListTableViewController.swift */,
+				A6FD030723834732007F0DB7 /* CreateBucketListViewController.swift */,
+				A6FD030E23834AB4007F0DB7 /* MenuViewController.swift */,
+				A6FD030923834750007F0DB7 /* BucketListItemViewController.swift */,
+				A6FD030C23834784007F0DB7 /* CreateBucketListItemViewController.swift */,
 				A6FD03032383462E007F0DB7 /* Login View Controllers */,
 				A6FD030623834706007F0DB7 /* Buket List View Controllers */,
 				A6FD030B2383475E007F0DB7 /* Bucket List Item View Controllers */,
@@ -108,8 +115,6 @@
 		A6FD03032383462E007F0DB7 /* Login View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				953ACE7F238322FB00C8FA44 /* SignInViewController.swift */,
-				953ACE812383230A00C8FA44 /* SignUpViewController.swift */,
 			);
 			path = "Login View Controllers";
 			sourceTree = "<group>";
@@ -117,9 +122,6 @@
 		A6FD030623834706007F0DB7 /* Buket List View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A6FD030423834700007F0DB7 /* BucketListTableViewController.swift */,
-				A6FD030723834732007F0DB7 /* CreateBucketListViewController.swift */,
-				A6FD030E23834AB4007F0DB7 /* MenuViewController.swift */,
 			);
 			path = "Buket List View Controllers";
 			sourceTree = "<group>";
@@ -127,8 +129,6 @@
 		A6FD030B2383475E007F0DB7 /* Bucket List Item View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A6FD030923834750007F0DB7 /* BucketListItemViewController.swift */,
-				A6FD030C23834784007F0DB7 /* CreateBucketListItemViewController.swift */,
 			);
 			path = "Bucket List Item View Controllers";
 			sourceTree = "<group>";
