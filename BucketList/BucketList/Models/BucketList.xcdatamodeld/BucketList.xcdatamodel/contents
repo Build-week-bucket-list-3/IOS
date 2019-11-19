@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14903" systemVersion="19A602" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BucketList" representedClassName="BucketList" syncable="YES" codeGenerationType="class">
+        <attribute name="createdBy" optional="YES" attributeType="Transformable"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="items" optional="YES" attributeType="Transformable" customClassName="NSAttributedString"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="private" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="sharedWith" optional="YES" attributeType="Transformable"/>
+    </entity>
+    <entity name="BucketListItem" representedClassName="BucketListItem" syncable="YES" codeGenerationType="class">
+        <attribute name="bucketListID" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="journalEntries" optional="YES" attributeType="Transformable"/>
+        <attribute name="photos" optional="YES" attributeType="Transformable"/>
+        <attribute name="videos" optional="YES" attributeType="Transformable"/>
+        <attribute name="voiceMemos" optional="YES" attributeType="Transformable"/>
+    </entity>
+    <elements>
+        <element name="BucketList" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="BucketListItem" positionX="-54" positionY="-9" width="128" height="133"/>
+    </elements>
+</model>
