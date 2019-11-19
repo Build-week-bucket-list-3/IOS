@@ -14,7 +14,7 @@ class BLshareViewController: UIViewController {
     @IBOutlet weak var updatePrivilegesButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//test
         // Do any additional setup after loading the view.
     }
     
