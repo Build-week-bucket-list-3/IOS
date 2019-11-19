@@ -47,7 +47,7 @@
                                                 <state key="normal" title="create an account"/>
                                                 <connections>
                                                     <action selector="createAccountButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FqM-Rf-O6V"/>
-                                                    <segue destination="ZJe-PX-m2D" kind="show" id="GTJ-nh-OWx"/>
+                                                    <segue destination="ZJe-PX-m2D" kind="show" identifier="CreateAccountSegue" id="GTJ-nh-OWx"/>
                                                 </connections>
                                             </button>
                                         </subviews>

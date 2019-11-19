@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  BucketListItem.swift
 //  BucketList
 //
 //  Created by Dennis Rudolph on 11/19/19.
@@ -8,8 +8,6 @@
 
 import Foundation
 
-struct User: Codable {
-    let username: String
-    let password: String
-    let email: String
+struct BucketListItem {
+    
 }
