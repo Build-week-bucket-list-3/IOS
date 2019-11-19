@@ -1,19 +1,24 @@
 //
-//  MenuViewController.swift
+//  SignInViewController.swift
 //  BucketList
 //
-//  Created by Gi Pyo Kim on 11/18/19.
+//  Created by Dennis Rudolph on 11/18/19.
 //  Copyright © 2019 GIPGIP Studio. All rights reserved.
 //
 
 import UIKit
 
-class MenuViewController: UIViewController {
+class SignInViewController: UIViewController {
 
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var signInButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        signInButton.layer.cornerRadius = 3.0
+        
     }
     
 
@@ -26,5 +31,12 @@ class MenuViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func createAccountButton(_ sender: UIButton) {
+        
+        
+    }
+    
+    @IBAction func signInButtonTapped(_ sender: UIButton) {
+    }
+    
 }
