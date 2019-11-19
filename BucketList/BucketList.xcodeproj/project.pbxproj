@@ -26,7 +26,6 @@
 		A6FD030823834732007F0DB7 /* CreateBucketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD030723834732007F0DB7 /* CreateBucketListViewController.swift */; };
 		A6FD030A23834750007F0DB7 /* BucketListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD030923834750007F0DB7 /* BucketListItemViewController.swift */; };
 		A6FD030D23834784007F0DB7 /* CreateBucketListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD030C23834784007F0DB7 /* CreateBucketListItemViewController.swift */; };
-		A6FD030F23834AB4007F0DB7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD030E23834AB4007F0DB7 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +52,6 @@
 		A6FD030723834732007F0DB7 /* CreateBucketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateBucketListViewController.swift; path = "BucketList/Buket List View Controllers/CreateBucketListViewController.swift"; sourceTree = SOURCE_ROOT; };
 		A6FD030923834750007F0DB7 /* BucketListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListItemViewController.swift; sourceTree = "<group>"; };
 		A6FD030C23834784007F0DB7 /* CreateBucketListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateBucketListItemViewController.swift; path = "BucketList/Bucket List Item View Controllers/CreateBucketListItemViewController.swift"; sourceTree = SOURCE_ROOT; };
-		A6FD030E23834AB4007F0DB7 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = BucketList/MenuViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +120,6 @@
 				953ACE83238335A500C8FA44 /* Fonts */,
 				A6FD02DF23831006007F0DB7 /* AppDelegate.swift */,
 				A6FD02E123831006007F0DB7 /* SceneDelegate.swift */,
-				A6FD030E23834AB4007F0DB7 /* MenuViewController.swift */,
 				953ACE99238365D000C8FA44 /* Info View Controllers */,
 				A6FD03032383462E007F0DB7 /* Login View Controllers */,
 				A6FD030623834706007F0DB7 /* Buket List View Controllers */,
@@ -284,7 +281,6 @@
 				A6FD030823834732007F0DB7 /* CreateBucketListViewController.swift in Sources */,
 				953ACE80238322FB00C8FA44 /* SignInViewController.swift in Sources */,
 				A6FD030523834700007F0DB7 /* BucketListTableViewController.swift in Sources */,
-				A6FD030F23834AB4007F0DB7 /* MenuViewController.swift in Sources */,
 				953ACE97238364E000C8FA44 /* BLshareViewController.swift in Sources */,
 				A6FD02E023831006007F0DB7 /* AppDelegate.swift in Sources */,
 				A6FD02E223831006007F0DB7 /* SceneDelegate.swift in Sources */,

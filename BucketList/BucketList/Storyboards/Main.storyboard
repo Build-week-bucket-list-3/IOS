@@ -7,6 +7,11 @@
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Exo-SemiBold.ttf">
+            <string>Exo-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Bucket List-->
         <scene sceneID="DWR-LR-Drz">
@@ -29,10 +34,10 @@
                                     </connections>
                                 </button>
                                 <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wa4-zP-yxf">
-                                    <rect key="frame" x="0.0" y="0.0" width="240" height="242"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="180" height="134"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="240" id="Kwl-M5-npZ"/>
-                                        <constraint firstAttribute="height" constant="242" id="jCj-qW-7oj"/>
+                                        <constraint firstAttribute="width" constant="180" id="Kwl-M5-npZ"/>
+                                        <constraint firstAttribute="height" constant="134" id="jCj-qW-7oj"/>
                                     </constraints>
                                     <connections>
                                         <segue destination="Uie-4a-Nj5" kind="embed" id="syj-iK-5Zg"/>
@@ -72,6 +77,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="leadingConstraint" destination="Gy7-pa-Akv" id="Xik-Lv-3uC"/>
+                        <outlet property="menuView" destination="wa4-zP-yxf" id="dct-Iw-nNN"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jRr-fJ-dlR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -371,26 +377,46 @@
             <objects>
                 <viewController id="Uie-4a-Nj5" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qBD-tF-0gC">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="242"/>
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="134"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zdz-D0-lAu">
-                                <rect key="frame" x="34" y="26" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zdz-D0-lAu">
+                                <rect key="frame" x="20" y="18" width="44" height="31"/>
+                                <fontDescription key="fontDescription" name="Exo-SemiBold" family="Exo" pointSize="14"/>
+                                <state key="normal" title="Profile">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIh-ei-ZhX">
-                                <rect key="frame" x="34" y="84" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nA9-HJ-qsn">
+                                <rect key="frame" x="0.0" y="67" width="180" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="OXl-IT-EaM"/>
+                                    <constraint firstAttribute="width" constant="180" id="g4l-uD-xUi"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OmT-vU-a5x">
+                                <rect key="frame" x="20" y="86" width="54" height="31"/>
+                                <fontDescription key="fontDescription" name="Exo-SemiBold" family="Exo" pointSize="14"/>
+                                <state key="normal" title="Sign out">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Zdz-D0-lAu" firstAttribute="leading" secondItem="7Db-vK-dG2" secondAttribute="leading" constant="20" id="7ae-6P-z5L"/>
+                            <constraint firstItem="nA9-HJ-qsn" firstAttribute="top" secondItem="Zdz-D0-lAu" secondAttribute="bottom" constant="18" id="JPx-Hj-xLt"/>
+                            <constraint firstItem="OmT-vU-a5x" firstAttribute="top" secondItem="nA9-HJ-qsn" secondAttribute="bottom" constant="18" id="Lmb-ph-O5R"/>
+                            <constraint firstItem="Zdz-D0-lAu" firstAttribute="top" secondItem="qBD-tF-0gC" secondAttribute="top" constant="18" id="UAt-oL-4vh"/>
+                            <constraint firstItem="OmT-vU-a5x" firstAttribute="leading" secondItem="7Db-vK-dG2" secondAttribute="leading" constant="20" id="hhj-uh-U5I"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7Db-vK-dG2"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEG-pP-vt2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="955" y="-233"/>
+            <point key="canvasLocation" x="953.62318840579712" y="-233.03571428571428"/>
         </scene>
     </scenes>
 </document>

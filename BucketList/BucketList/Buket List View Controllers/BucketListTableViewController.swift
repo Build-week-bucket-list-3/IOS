@@ -12,14 +12,17 @@ class BucketListTableViewController: UITableViewController {
 
     // Side Menu
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var menuView: UIView!
     var isMenuShowing = false
-    let menuHidingConstant: CGFloat = -240
+    let menuHidingConstant: CGFloat = -245
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         leadingConstraint.constant = menuHidingConstant
-        
+        menuView.layer.shadowOpacity = 1
+        menuView.layer.shadowRadius = 5
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
