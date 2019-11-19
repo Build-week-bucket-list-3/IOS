@@ -1,5 +1,5 @@
 //
-//  SignInViewController.swift
+//  BLshareViewController.swift
 //  BucketList
 //
 //  Created by Dennis Rudolph on 11/18/19.
@@ -8,17 +8,14 @@
 
 import UIKit
 
-class SignInViewController: UIViewController {
+class BLshareViewController: UIViewController {
 
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var signInButton: UIButton!
-    
+    @IBOutlet weak var BLusernameTextField: UITextField!
+    @IBOutlet weak var updatePrivilegesButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        signInButton.layer.cornerRadius = 3.0
-        
+//test
+        // Do any additional setup after loading the view.
     }
     
 
@@ -31,10 +28,9 @@ class SignInViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func createAccountButton(_ sender: UIButton) {
+    @IBAction func updatePrivilegesButtonTapped(_ sender: UIButton) {
     }
-    
-    @IBAction func signInButtonTapped(_ sender: UIButton) {
+    @IBAction func shareButtonTapped(_ sender: UIButton) {
     }
     
 }
