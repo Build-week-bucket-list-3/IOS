@@ -231,10 +231,10 @@
             </objects>
             <point key="canvasLocation" x="1886.9565217391305" y="900.66964285714278"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Journal Table View Controller-->
         <scene sceneID="BVT-1h-5vR">
             <objects>
-                <tableViewController id="yDx-cX-q4j" sceneMemberID="viewController">
+                <tableViewController id="yDx-cX-q4j" customClass="JournalTableViewController" customModule="BucketList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hOM-kd-T6r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="484"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -355,10 +355,10 @@
             </objects>
             <point key="canvasLocation" x="1886.9565217391305" y="1605.8035714285713"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Media Collection View Controller-->
         <scene sceneID="94q-It-EAT">
             <objects>
-                <collectionViewController id="o7a-HW-pdN" sceneMemberID="viewController">
+                <collectionViewController id="o7a-HW-pdN" customClass="MediaCollectionViewController" customModule="BucketList" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="IIl-Zr-f59">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="484"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

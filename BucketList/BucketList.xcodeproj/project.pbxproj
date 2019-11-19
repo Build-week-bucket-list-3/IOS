@@ -27,6 +27,8 @@
 		A6FD030A23834750007F0DB7 /* BucketListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD030923834750007F0DB7 /* BucketListItemViewController.swift */; };
 		A6FD030D23834784007F0DB7 /* CreateBucketListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD030C23834784007F0DB7 /* CreateBucketListItemViewController.swift */; };
 		A6FD03112383CD03007F0DB7 /* BLIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD03102383CD03007F0DB7 /* BLIDetailViewController.swift */; };
+		A6FD03132383D325007F0DB7 /* JournalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD03122383D325007F0DB7 /* JournalTableViewController.swift */; };
+		A6FD03152383D333007F0DB7 /* MediaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD03142383D333007F0DB7 /* MediaCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		A6FD030923834750007F0DB7 /* BucketListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListItemViewController.swift; sourceTree = "<group>"; };
 		A6FD030C23834784007F0DB7 /* CreateBucketListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateBucketListItemViewController.swift; path = "BucketList/Bucket List Item View Controllers/CreateBucketListItemViewController.swift"; sourceTree = SOURCE_ROOT; };
 		A6FD03102383CD03007F0DB7 /* BLIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BLIDetailViewController.swift; path = BucketList/BLIDetailViewController.swift; sourceTree = SOURCE_ROOT; };
+		A6FD03122383D325007F0DB7 /* JournalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JournalTableViewController.swift; path = BucketList/JournalTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		A6FD03142383D333007F0DB7 /* MediaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MediaCollectionViewController.swift; path = BucketList/MediaCollectionViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,8 @@
 				A6FD030923834750007F0DB7 /* BucketListItemViewController.swift */,
 				A6FD030C23834784007F0DB7 /* CreateBucketListItemViewController.swift */,
 				A6FD03102383CD03007F0DB7 /* BLIDetailViewController.swift */,
+				A6FD03122383D325007F0DB7 /* JournalTableViewController.swift */,
+				A6FD03142383D333007F0DB7 /* MediaCollectionViewController.swift */,
 			);
 			path = "Bucket List Item View Controllers";
 			sourceTree = "<group>";
@@ -290,7 +296,9 @@
 				953ACE822383230A00C8FA44 /* SignUpViewController.swift in Sources */,
 				A6FD03112383CD03007F0DB7 /* BLIDetailViewController.swift in Sources */,
 				953ACE95238364DA00C8FA44 /* BLinfoViewController.swift in Sources */,
+				A6FD03132383D325007F0DB7 /* JournalTableViewController.swift in Sources */,
 				A6FD030D23834784007F0DB7 /* CreateBucketListItemViewController.swift in Sources */,
+				A6FD03152383D333007F0DB7 /* MediaCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
