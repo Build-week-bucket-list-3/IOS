@@ -23,16 +23,6 @@ class SignInViewController: UIViewController {
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     @IBAction func createAccountButton(_ sender: UIButton) {
         
         
@@ -41,4 +31,13 @@ class SignInViewController: UIViewController {
     @IBAction func signInButtonTapped(_ sender: UIButton) {
     }
     
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "CreateAccountSegue" {
+            if let createVC = segue.destination as? SignUpViewController {
+                createVC.bucketListController = bucketListController
+            }
+        }
+    }
 }
