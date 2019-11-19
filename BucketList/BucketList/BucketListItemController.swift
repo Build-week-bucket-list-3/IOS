@@ -11,7 +11,7 @@ import Foundation
 class BucketListItemController {
     
     var bucketListItems: [BucketListItem] = []
+    var bearer: Bearer?
     
     // Create CRUD Methods
-    
 }

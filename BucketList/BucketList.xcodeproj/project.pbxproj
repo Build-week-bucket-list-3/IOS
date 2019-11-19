@@ -35,6 +35,7 @@
 		A6FD03112383CD03007F0DB7 /* BLIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD03102383CD03007F0DB7 /* BLIDetailViewController.swift */; };
 		A6FD03132383D325007F0DB7 /* JournalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD03122383D325007F0DB7 /* JournalTableViewController.swift */; };
 		A6FD03152383D333007F0DB7 /* MediaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD03142383D333007F0DB7 /* MediaCollectionViewController.swift */; };
+		A6FD031723845205007F0DB7 /* NetworkingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD031623845205007F0DB7 /* NetworkingHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,15 +62,16 @@
 		A6FD02E623831006007F0DB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		A6FD02E823831007007F0DB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6FD02EB23831007007F0DB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A6FD02ED23831007007F0DB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6FD02ED23831007007F0DB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "BucketList/Helper Files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		A6FD02F323831376007F0DB7 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A6FD030423834700007F0DB7 /* BucketListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListTableViewController.swift; sourceTree = "<group>"; };
-		A6FD030723834732007F0DB7 /* CreateBucketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateBucketListViewController.swift; path = "BucketList/Buket List View Controllers/CreateBucketListViewController.swift"; sourceTree = SOURCE_ROOT; };
+		A6FD030723834732007F0DB7 /* CreateBucketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateBucketListViewController.swift; path = "BucketList/View Controllers/Buket List View Controllers/CreateBucketListViewController.swift"; sourceTree = SOURCE_ROOT; };
 		A6FD030923834750007F0DB7 /* BucketListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListItemViewController.swift; sourceTree = "<group>"; };
-		A6FD030C23834784007F0DB7 /* CreateBucketListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateBucketListItemViewController.swift; path = "BucketList/Bucket List Item View Controllers/CreateBucketListItemViewController.swift"; sourceTree = SOURCE_ROOT; };
+		A6FD030C23834784007F0DB7 /* CreateBucketListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateBucketListItemViewController.swift; path = "BucketList/View Controllers/Bucket List Item View Controllers/CreateBucketListItemViewController.swift"; sourceTree = SOURCE_ROOT; };
 		A6FD03102383CD03007F0DB7 /* BLIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BLIDetailViewController.swift; path = BucketList/BLIDetailViewController.swift; sourceTree = SOURCE_ROOT; };
 		A6FD03122383D325007F0DB7 /* JournalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JournalTableViewController.swift; path = BucketList/JournalTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		A6FD03142383D333007F0DB7 /* MediaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MediaCollectionViewController.swift; path = BucketList/MediaCollectionViewController.swift; sourceTree = SOURCE_ROOT; };
+		A6FD031623845205007F0DB7 /* NetworkingHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkingHelpers.swift; path = BucketList/NetworkingHelpers.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,9 +129,10 @@
 			children = (
 				953ACE83238335A500C8FA44 /* Fonts */,
 				A6FD02DF23831006007F0DB7 /* AppDelegate.swift */,
-				A6FD02E823831007007F0DB7 /* Assets.xcassets */,
 				A6FD02ED23831007007F0DB7 /* Info.plist */,
+				A6FD02E823831007007F0DB7 /* Assets.xcassets */,
 				A6FD02E123831006007F0DB7 /* SceneDelegate.swift */,
+				A6FD031623845205007F0DB7 /* NetworkingHelpers.swift */,
 			);
 			path = "Helper Files";
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				953ACE9F238436EA00C8FA44 /* User.swift in Sources */,
 				A6FD02E223831006007F0DB7 /* SceneDelegate.swift in Sources */,
 				953ACE822383230A00C8FA44 /* SignUpViewController.swift in Sources */,
+				A6FD031723845205007F0DB7 /* NetworkingHelpers.swift in Sources */,
 				A6FD03112383CD03007F0DB7 /* BLIDetailViewController.swift in Sources */,
 				953ACE95238364DA00C8FA44 /* BLinfoViewController.swift in Sources */,
 				A6FD03132383D325007F0DB7 /* JournalTableViewController.swift in Sources */,
@@ -509,7 +513,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FLZ8CLXX64;
-				INFOPLIST_FILE = BucketList/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BucketList/Helper Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -528,7 +532,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FLZ8CLXX64;
-				INFOPLIST_FILE = BucketList/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BucketList/Helper Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
