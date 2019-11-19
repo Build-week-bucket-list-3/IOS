@@ -30,8 +30,11 @@ class BucketListController {
     
     
     
-    // MARK: - Login methods
+    // MARK: - User methods
     
+    //add login and logout and edit
+    
+        
     func signUp(with user: User, completion: @escaping (Error?) -> ()) {
         let signUpURL = baseURL.appendingPathComponent("/createnewuser")
         
