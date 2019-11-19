@@ -60,7 +60,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="XDD-Nk-yjO" kind="show" id="un4-0y-NFh"/>
+                                    <segue destination="XDD-Nk-yjO" kind="show" identifier="BLDetailViewSegue" id="un4-0y-NFh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -165,7 +165,7 @@
                                             <color key="titleShadowColor" red="0.0075939223170000004" green="0.49731212850000001" blue="0.6491755843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="ajF-j1-UBC" kind="show" id="1jN-8I-h4J"/>
+                                            <segue destination="ajF-j1-UBC" kind="show" identifier="CreateBLISegue" id="1jN-8I-h4J"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgA-Pb-299">
@@ -207,7 +207,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
                                         <connections>
-                                            <segue destination="6t1-QO-bw7" kind="show" id="st7-5G-X2o"/>
+                                            <segue destination="6t1-QO-bw7" kind="show" identifier="BLIDetailViewSegue" id="st7-5G-X2o"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
