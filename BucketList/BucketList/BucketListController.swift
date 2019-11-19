@@ -18,6 +18,25 @@ class BucketListController {
     
 //    let baseUR = ... Setup base URL
     
-    // Create CRUD Methods
+    // Create CRUD Bucket List Methods
+    
+    
     
 }
+
+
+//// For GiPyo
+//override func viewDidAppear(_ animated: Bool) {
+//    super.viewDidAppear(animated)
+//    tableView.reloadData()
+//    if BucketListController.bearer == nil {
+////       send to modal Login view performSegue(withIdentifier: "LogInSegue", sender: self)
+//    } else {
+////       fetch the bucket lists
+//    }
+//}
+//
+//if segue.identifier == "LogInSegue" {
+//if let loginVC = segue.destination as? SignInViewController {
+//    loginVC.bucketListController = bucketListController
+//}

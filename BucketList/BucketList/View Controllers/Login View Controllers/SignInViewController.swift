@@ -9,6 +9,8 @@
 import UIKit
 
 class SignInViewController: UIViewController {
+    
+    var bucketListController: BucketListController?
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
