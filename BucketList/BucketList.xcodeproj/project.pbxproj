@@ -26,6 +26,7 @@
 		A6FD030823834732007F0DB7 /* CreateBucketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD030723834732007F0DB7 /* CreateBucketListViewController.swift */; };
 		A6FD030A23834750007F0DB7 /* BucketListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD030923834750007F0DB7 /* BucketListItemViewController.swift */; };
 		A6FD030D23834784007F0DB7 /* CreateBucketListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD030C23834784007F0DB7 /* CreateBucketListItemViewController.swift */; };
+		A6FD03112383CD03007F0DB7 /* BLIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD03102383CD03007F0DB7 /* BLIDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		A6FD030723834732007F0DB7 /* CreateBucketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateBucketListViewController.swift; path = "BucketList/Buket List View Controllers/CreateBucketListViewController.swift"; sourceTree = SOURCE_ROOT; };
 		A6FD030923834750007F0DB7 /* BucketListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListItemViewController.swift; sourceTree = "<group>"; };
 		A6FD030C23834784007F0DB7 /* CreateBucketListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateBucketListItemViewController.swift; path = "BucketList/Bucket List Item View Controllers/CreateBucketListItemViewController.swift"; sourceTree = SOURCE_ROOT; };
+		A6FD03102383CD03007F0DB7 /* BLIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BLIDetailViewController.swift; path = BucketList/BLIDetailViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			children = (
 				A6FD030923834750007F0DB7 /* BucketListItemViewController.swift */,
 				A6FD030C23834784007F0DB7 /* CreateBucketListItemViewController.swift */,
+				A6FD03102383CD03007F0DB7 /* BLIDetailViewController.swift */,
 			);
 			path = "Bucket List Item View Controllers";
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				A6FD02E023831006007F0DB7 /* AppDelegate.swift in Sources */,
 				A6FD02E223831006007F0DB7 /* SceneDelegate.swift in Sources */,
 				953ACE822383230A00C8FA44 /* SignUpViewController.swift in Sources */,
+				A6FD03112383CD03007F0DB7 /* BLIDetailViewController.swift in Sources */,
 				953ACE95238364DA00C8FA44 /* BLinfoViewController.swift in Sources */,
 				A6FD030D23834784007F0DB7 /* CreateBucketListItemViewController.swift in Sources */,
 			);
