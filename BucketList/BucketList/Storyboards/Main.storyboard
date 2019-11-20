@@ -249,44 +249,27 @@
                                         <state key="normal" title="Button"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="kke-dq-XMK" secondAttribute="height" multiplier="2:1" id="D2P-mT-jY4"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xt5-oA-siD" customClass="BucketListItem" customModule="BucketList" customModuleProvider="target">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHH-BY-IyA">
                                 <rect key="frame" x="0.0" y="347" width="414" height="515"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sOg-aL-sc0">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ftX-Mh-Tcu">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="VCk-CO-1Bx">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                        <connections>
-                                            <segue destination="6t1-QO-bw7" kind="show" identifier="BLIDetailViewSegue" id="st7-5G-X2o"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
+                                <connections>
+                                    <segue destination="WiB-Di-slx" kind="embed" id="G4q-Ki-hbO"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Xt5-oA-siD" firstAttribute="trailing" secondItem="Hv4-1M-oDh" secondAttribute="trailing" id="30F-xp-bhE"/>
                             <constraint firstItem="kke-dq-XMK" firstAttribute="top" secondItem="Hv4-1M-oDh" secondAttribute="top" id="9M5-iT-rdI"/>
                             <constraint firstItem="kke-dq-XMK" firstAttribute="trailing" secondItem="Hv4-1M-oDh" secondAttribute="trailing" id="9jH-CS-0s5"/>
-                            <constraint firstItem="Xt5-oA-siD" firstAttribute="bottom" secondItem="Hv4-1M-oDh" secondAttribute="bottom" id="Jhb-SJ-BMj"/>
-                            <constraint firstItem="Xt5-oA-siD" firstAttribute="leading" secondItem="Hv4-1M-oDh" secondAttribute="leading" id="dQF-nR-dA3"/>
-                            <constraint firstItem="Xt5-oA-siD" firstAttribute="top" secondItem="kke-dq-XMK" secondAttribute="bottom" id="lYG-st-WJi"/>
+                            <constraint firstItem="Hv4-1M-oDh" firstAttribute="bottom" secondItem="dHH-BY-IyA" secondAttribute="bottom" id="Rjn-XI-aZW"/>
+                            <constraint firstItem="Hv4-1M-oDh" firstAttribute="trailing" secondItem="dHH-BY-IyA" secondAttribute="trailing" id="W56-Ra-vTC"/>
                             <constraint firstItem="kke-dq-XMK" firstAttribute="leading" secondItem="Hv4-1M-oDh" secondAttribute="leading" id="ocJ-6S-OKb"/>
+                            <constraint firstItem="dHH-BY-IyA" firstAttribute="top" secondItem="kke-dq-XMK" secondAttribute="bottom" id="vzW-Pt-qPf"/>
+                            <constraint firstItem="dHH-BY-IyA" firstAttribute="leading" secondItem="Hv4-1M-oDh" secondAttribute="leading" id="xjs-rP-2Cf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hv4-1M-oDh"/>
                     </view>
@@ -301,7 +284,7 @@
             <objects>
                 <tableViewController id="yDx-cX-q4j" customClass="JournalTableViewController" customModule="BucketList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hOM-kd-T6r">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="484"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="580"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -333,7 +316,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="omr-X3-50T">
-                                <rect key="frame" x="0.0" y="140" width="414" height="207"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="207"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMb-2I-45t">
                                         <rect key="frame" x="20" y="57" width="374" height="35"/>
@@ -369,7 +352,7 @@
                                 </constraints>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Zbl-df-iWC">
-                                <rect key="frame" x="20" y="347" width="374" height="32"/>
+                                <rect key="frame" x="20" y="251" width="374" height="32"/>
                                 <segments>
                                     <segment title="Journal"/>
                                     <segment title="Media"/>
@@ -379,13 +362,13 @@
                                 </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uxM-01-4tG" userLabel="JournalContainerView">
-                                <rect key="frame" x="0.0" y="378" width="414" height="484"/>
+                                <rect key="frame" x="0.0" y="282" width="414" height="580"/>
                                 <connections>
                                     <segue destination="yDx-cX-q4j" kind="embed" identifier="JournalViewSegue" id="pfJ-aG-tbI"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmn-ug-SYX" userLabel="MediaContainerView">
-                                <rect key="frame" x="0.0" y="378" width="414" height="484"/>
+                                <rect key="frame" x="0.0" y="282" width="414" height="580"/>
                                 <connections>
                                     <segue destination="o7a-HW-pdN" kind="embed" identifier="MediaViewSegue" id="Ds1-mo-Nlf"/>
                                 </connections>
@@ -428,7 +411,7 @@
             <objects>
                 <collectionViewController id="o7a-HW-pdN" customClass="MediaCollectionViewController" customModule="BucketList" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="IIl-Zr-f59">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="484"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="580"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GHd-bS-7Eb">
@@ -592,6 +575,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xBB-hS-JnS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1783" y="-398"/>
+        </scene>
+        <!--Bucket List Item Collection View Controller-->
+        <scene sceneID="9ru-IV-FUn">
+            <objects>
+                <collectionViewController id="WiB-Di-slx" customClass="BucketListItemCollectionViewController" customModule="BucketList" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="bhD-Qp-Rtz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="515"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JfE-ha-prz">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xFt-7Q-YKp">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UI6-yC-2jn">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="WiB-Di-slx" id="yhX-5L-4DK"/>
+                            <outlet property="delegate" destination="WiB-Di-slx" id="TPq-dl-yHR"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kVz-av-Msa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1135" y="959"/>
         </scene>
     </scenes>
     <resources>

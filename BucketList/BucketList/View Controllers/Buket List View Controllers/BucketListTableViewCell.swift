@@ -14,6 +14,9 @@ class BucketListTableViewCell: UITableViewCell {
     @IBOutlet weak var blImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var shareableLabel: UILabel!
+    
+    var bucketList: BucketList?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
