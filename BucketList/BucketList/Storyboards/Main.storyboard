@@ -532,10 +532,10 @@
         <!--ProfileStoryboard-->
         <scene sceneID="a1v-Fz-kto">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xBB-hS-JnS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="ProfileStoryboard" id="KYd-sv-N8P" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Ta1-6K-ikz"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xBB-hS-JnS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1783" y="-398"/>
         </scene>

@@ -13,16 +13,15 @@ class ProfileViewController: UIViewController {
     var user: User?
     var bucketListController: BucketListController?
     
-    @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var passwordLabel: UILabel!
-    @IBOutlet weak var sharedBucketListsLabel: UILabel!
-    @IBOutlet weak var privateBucketListsLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UTextField!
+    @IBOutlet weak var emailLabel: UTextField!
+    @IBOutlet weak var passwordLabel: UTextField!
+    @IBOutlet weak var sharedBucketListsLabel: UTextField!
+    @IBOutlet weak var privateBucketListsLabel: UTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     @IBAction func editButtonTapped(_ sender: UIButton) {
         //users/user

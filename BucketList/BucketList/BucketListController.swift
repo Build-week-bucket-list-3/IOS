@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import OAuthSwift
 
 class BucketListController {
     
@@ -68,54 +69,28 @@ class BucketListController {
             }.resume()
         }
     
-    func signIn(username: String, password: String, completion: @escaping (Error?) -> ()) {
-        let signInURL = baseURL.appendingPathComponent("/login")
-        
-        var request = URLRequest(url: signInURL)
-        request.httpMethod = "GET"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        let user = LoginUser(username: username, password: password)
-        
-        let jsonEncoder = JSONEncoder()
-        do {
-            let jsonData = try jsonEncoder.encode(user)
-            request.httpBody = jsonData
-        } catch {
-            print("Error encoding user object: \(error)")
-            completion(error)
-            return
+    func signIn(username: String, password: String) {
+        let oauthswift = OAuth2Swift(
+            consumerKey:    "lambda-client",
+            consumerSecret: "lambda-secret",
+            authorizeUrl:   "https://gcgsauce-bucketlist.herokuapp.com/login",
+            accessTokenUrl: "https://gcgsauce-bucketlist.herokuapp.com/login",
+            responseType:   "token"
+        )
+        let _ = oauthswift.authorize(
+            withCallbackURL: URL(string: "oauth-swift://gcgsauce-bucketlist.herokuapp.com")!,
+            scope: "", state: "") { result in
+                switch result {
+                case .success(let (credential, _, _)):
+                    print("It worked the token is \(credential.oauthToken)")
+                    self.bearer?.token = credential.oauthToken
+                case .failure:
+                    print("Error fetching token.")
+                }
         }
-        
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            if let response = response as? HTTPURLResponse,
-                response.statusCode != 200 {
-                completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
-                return
-            }
-            
-            if let error = error {
-                completion(error)
-                return
-            }
-            
-            guard let data = data else {
-                completion(NSError())
-                return
-            }
-            
-            let decoder = JSONDecoder()
-            do {
-                self.bearer = try decoder.decode(Bearer.self, from: data)
-            } catch {
-                print("Error decoding bearer object: \(error)")
-                completion(error)
-                return
-            }
-            
-            completion(nil)
-        }.resume()
     }
+    
+
     
     func logout(username: String, password: String, completion: @escaping (Error?) -> ()) {
         let signInURL = baseURL.appendingPathComponent("/logout")
@@ -149,6 +124,7 @@ class BucketListController {
             }
             completion(nil)
         }.resume()
+        self.bearer = nil
     }
 }
 

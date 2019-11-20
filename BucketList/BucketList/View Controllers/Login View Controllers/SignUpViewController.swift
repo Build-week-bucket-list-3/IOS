@@ -65,15 +65,15 @@ class SignUpViewController: UIViewController {
             }
         }
         
-        bucketListController.signIn(username: username, password: password) { (error) in
-            if let error = error {
-                print("Error occurred during sign up: \(error)")
-            } else {
-                DispatchQueue.main.async {
-                    self.dismiss(animated: true, completion: nil)
-                }
-            }
-        }
+//        bucketListController.signIn(username: username, password: password) { (error) in
+//            if let error = error {
+//                print("Error occurred during sign up: \(error)")
+//            } else {
+//                DispatchQueue.main.async {
+//                    self.dismiss(animated: true, completion: nil)
+//                }
+//            }
+//        }
         
     }
 }
