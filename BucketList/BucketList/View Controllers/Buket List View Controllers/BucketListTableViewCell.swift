@@ -10,6 +10,10 @@ import UIKit
 
 class BucketListTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var uiView: UIView!
+    @IBOutlet weak var blImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var shareableLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

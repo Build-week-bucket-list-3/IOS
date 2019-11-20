@@ -8,6 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Exo-Medium.ttf">
+            <string>Exo-Medium</string>
+        </array>
         <array key="Exo-SemiBold.ttf">
             <string>Exo-SemiBold</string>
         </array>
@@ -22,12 +25,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="odW-Ca-IZc">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a62-9R-R8m">
-                                    <rect key="frame" x="138" y="7" width="138" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a62-9R-R8m">
+                                    <rect key="frame" x="16" y="52.5" width="382" height="30"/>
                                     <state key="normal" title="Create a Bucket List"/>
                                     <connections>
                                         <segue destination="FdM-Zf-g4U" kind="show" identifier="CreateBucketListSegue" id="GQS-zZ-mo7"/>
@@ -47,19 +49,70 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
+                                <constraint firstItem="a62-9R-R8m" firstAttribute="leading" secondItem="odW-Ca-IZc" secondAttribute="leading" constant="16" id="5zL-P4-3tP"/>
                                 <constraint firstItem="wa4-zP-yxf" firstAttribute="leading" secondItem="odW-Ca-IZc" secondAttribute="leading" id="Gy7-pa-Akv"/>
+                                <constraint firstAttribute="trailing" secondItem="a62-9R-R8m" secondAttribute="trailing" constant="16" id="P07-mZ-A9u"/>
+                                <constraint firstItem="a62-9R-R8m" firstAttribute="centerX" secondItem="odW-Ca-IZc" secondAttribute="centerX" id="VC8-NY-BYu"/>
+                                <constraint firstItem="a62-9R-R8m" firstAttribute="centerY" secondItem="odW-Ca-IZc" secondAttribute="centerY" id="XZN-RX-JK4"/>
                                 <constraint firstItem="wa4-zP-yxf" firstAttribute="top" secondItem="odW-Ca-IZc" secondAttribute="top" id="eXc-2m-Kb4"/>
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="8lS-wv-fFa">
-                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="200" id="8lS-wv-fFa" customClass="BucketListTableViewCell" customModule="BucketList" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="163" width="414" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8lS-wv-fFa" id="w81-0d-Cgl">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbw-M4-Eng">
+                                            <rect key="frame" x="16" y="0.0" width="382" height="200"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1GI-Uq-HFB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="148"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="148" id="7nI-ng-Y7c"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Traveling" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2e-Mc-u8C">
+                                                    <rect key="frame" x="12" y="156" width="358" height="27"/>
+                                                    <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Private" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4V-d6-pco">
+                                                    <rect key="frame" x="12" y="183" width="358" height="13.5"/>
+                                                    <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="Y4V-d6-pco" firstAttribute="trailing" secondItem="q2e-Mc-u8C" secondAttribute="trailing" id="12e-wg-6eh"/>
+                                                <constraint firstItem="q2e-Mc-u8C" firstAttribute="top" secondItem="1GI-Uq-HFB" secondAttribute="bottom" constant="8" id="4P4-SE-mvW"/>
+                                                <constraint firstItem="1GI-Uq-HFB" firstAttribute="top" secondItem="dbw-M4-Eng" secondAttribute="top" id="L8G-8I-AzG"/>
+                                                <constraint firstItem="Y4V-d6-pco" firstAttribute="leading" secondItem="q2e-Mc-u8C" secondAttribute="leading" id="MwP-dt-kVC"/>
+                                                <constraint firstAttribute="trailing" secondItem="1GI-Uq-HFB" secondAttribute="trailing" id="P6m-ac-T2v"/>
+                                                <constraint firstAttribute="trailing" secondItem="q2e-Mc-u8C" secondAttribute="trailing" constant="12" id="YLW-Sw-hy4"/>
+                                                <constraint firstItem="Y4V-d6-pco" firstAttribute="top" secondItem="q2e-Mc-u8C" secondAttribute="bottom" id="h5r-TC-gDj"/>
+                                                <constraint firstItem="1GI-Uq-HFB" firstAttribute="leading" secondItem="dbw-M4-Eng" secondAttribute="leading" id="hHi-Ff-WMI"/>
+                                                <constraint firstItem="q2e-Mc-u8C" firstAttribute="leading" secondItem="dbw-M4-Eng" secondAttribute="leading" constant="12" id="u35-BH-Dtr"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="dbw-M4-Eng" secondAttribute="bottom" id="9Pf-yU-jUy"/>
+                                        <constraint firstAttribute="trailing" secondItem="dbw-M4-Eng" secondAttribute="trailing" constant="16" id="DFR-yG-Akb"/>
+                                        <constraint firstItem="dbw-M4-Eng" firstAttribute="top" secondItem="w81-0d-Cgl" secondAttribute="top" id="JoI-0I-FbN"/>
+                                        <constraint firstItem="dbw-M4-Eng" firstAttribute="leading" secondItem="w81-0d-Cgl" secondAttribute="leading" constant="16" id="thW-co-xKk"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="imageView" destination="1GI-Uq-HFB" id="u9c-Wq-qg3"/>
+                                    <outlet property="nameLabel" destination="q2e-Mc-u8C" id="Z95-2p-9g6"/>
+                                    <outlet property="shareableLabel" destination="Y4V-d6-pco" id="BR1-Tu-RAX"/>
+                                    <outlet property="uiView" destination="dbw-M4-Eng" id="Dkb-l3-eo4"/>
                                     <segue destination="XDD-Nk-yjO" kind="show" identifier="BLDetailViewSegue" id="un4-0y-NFh"/>
                                 </connections>
                             </tableViewCell>
@@ -77,6 +130,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="createABucketListButton" destination="a62-9R-R8m" id="hDY-no-iPj"/>
                         <outlet property="leadingConstraint" destination="Gy7-pa-Akv" id="Xik-Lv-3uC"/>
                         <outlet property="menuView" destination="wa4-zP-yxf" id="dct-Iw-nNN"/>
                     </connections>

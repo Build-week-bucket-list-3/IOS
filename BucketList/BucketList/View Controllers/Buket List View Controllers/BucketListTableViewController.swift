@@ -14,6 +14,7 @@ class BucketListTableViewController: UITableViewController {
     // Side Menu
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var menuView: UIView!
+    @IBOutlet weak var createABucketListButton: UIButton!
     var isMenuShowing = false
     let menuHidingConstant: CGFloat = -245
     
@@ -24,11 +25,10 @@ class BucketListTableViewController: UITableViewController {
         
         let fetchRequest: NSFetchRequest<BucketList> = BucketList.fetchRequest()
         fetchRequest.sortDescriptors = [
-            NSSortDescriptor(key: "shareable", ascending: true),
             NSSortDescriptor(key: "name", ascending: true)
         ]
         
-        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataStack.shared.mainContext, sectionNameKeyPath: "shareable", cacheName: nil)
+        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataStack.shared.mainContext, sectionNameKeyPath: "name", cacheName: nil)
         
         frc.delegate = self
         
@@ -46,7 +46,7 @@ class BucketListTableViewController: UITableViewController {
         
         if bucketListController.bearer == nil {
             // TODO: Verify segue identifier
-            performSegue(withIdentifier: "LoginSegue", sender: self)
+            // performSegue(withIdentifier: "LoginSegue", sender: self)
             
         } else {
             DispatchQueue.main.async {
@@ -60,9 +60,15 @@ class BucketListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // side menu setup
         leadingConstraint.constant = menuHidingConstant
         menuView.layer.shadowOpacity = 1
         menuView.layer.shadowRadius = 5
+        
+        // Create a Bucket List Button setup
+        createABucketListButton.layer.cornerRadius = 5
+        createABucketListButton.layer.borderWidth = 2
+        createABucketListButton.layer.borderColor = CGColor(srgbRed: 2, green: 127, blue: 167, alpha: 1)
         
         tableView.reloadData()
     }
