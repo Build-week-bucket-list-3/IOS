@@ -10,9 +10,9 @@ import Foundation
 
 public class BucketListItems: NSObject, NSCoding {
     
-    var items: [BucketListItem]
+    public var items: [BucketListItem] = []
     
-    enum Key: String {
+    enum CodingKeys: String, CodingKey {
         case items = "items"
     }
     
@@ -20,12 +20,16 @@ public class BucketListItems: NSObject, NSCoding {
         self.items = items
     }
     
+    public override init() {
+        super.init()
+    }
+    
     public func encode(with coder: NSCoder) {
-        coder.encode(items, forKey: Key.items.rawValue)
+        coder.encode(items, forKey: CodingKeys.items.rawValue)
     }
     
     public required convenience init?(coder: NSCoder) {
-        let decodedItem = coder.decodeObject(forKey: Key.items.rawValue) as! [BucketListItem]
+        let decodedItem = coder.decodeObject(forKey: CodingKeys.items.rawValue) as! [BucketListItem]
         
         self.init(items: decodedItem)
     }
