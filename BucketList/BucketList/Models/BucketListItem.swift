@@ -8,14 +8,14 @@
 
 import Foundation
 
-class BucketListItem: NSObject, NSCoding {
+public class BucketListItem: NSObject, NSCoding {
     
-    public var id: Int32
-    public var bucketListID: Int32
-    public var journalEntries: [URL]
-    public var photos: [URL]
-    public var videos: [URL]
-    public var voiceMemos: [URL]
+    public var id: Int32 = 0
+    public var bucketListID: Int32 = 0
+    public var journalEntries: [URL] = []
+    public var photos: [URL] = []
+    public var videos: [URL] = []
+    public var voiceMemos: [URL] = []
     
     // var bucketListItemRepresentation:
     
@@ -37,9 +37,9 @@ class BucketListItem: NSObject, NSCoding {
         self.voiceMemos = voiceMemos
     }
     
-//    public override init() {
-//        super.init()
-//    }
+    public override init() {
+        super.init()
+    }
     
     public func encode(with coder: NSCoder) {
         coder.encode(id, forKey: Key.id.rawValue)
