@@ -12,7 +12,7 @@ public class BucketListItems: NSObject, NSCoding {
     
     public var items: [BucketListItem] = []
     
-    enum CodingKeys: String, CodingKey {
+    enum Key: String, CodingKey {
         case items = "items"
     }
     
@@ -25,13 +25,15 @@ public class BucketListItems: NSObject, NSCoding {
     }
     
     public func encode(with coder: NSCoder) {
-        coder.encode(items, forKey: CodingKeys.items.rawValue)
+        coder.encode(items, forKey: Key.items.rawValue)
     }
     
     public required convenience init?(coder: NSCoder) {
-        let decodedItem = coder.decodeObject(forKey: CodingKeys.items.rawValue) as! [BucketListItem]
+        guard let decodedItems = coder.decodeObject(forKey: Key.items.rawValue) as? [BucketListItem] else {
+            return nil
+        }
         
-        self.init(items: decodedItem)
+        self.init(items: decodedItems)
     }
     
     

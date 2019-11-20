@@ -11,8 +11,8 @@ import CoreData
 
 extension BucketList {
     var bucketListRepresentation: BucketListRepresentation? {
-        guard let createdBy = createdBy as? User,
-            let sharedWith = sharedWith as? [User],
+        guard let createdBy = createdBy,
+            let sharedWith = sharedWith,
             let name = name,
             let items = items else { return nil }
         
@@ -28,25 +28,25 @@ extension BucketList {
             let itemVoiceMemos = items.items[i].voiceMemos
             
             var journalEntries: [JournalEntry] = []
-            for j in itemJournalEntries.indices {
+            for i in itemJournalEntries.indices {
                 let journalEntry = JournalEntry(url: itemJournalEntries[i].absoluteString)
                 journalEntries.append(journalEntry)
             }
             
             var photos: [Photo] = []
-            for j in itemPhotos.indices {
+            for i in itemPhotos.indices {
                 let photo = Photo(url: itemPhotos[i].absoluteString)
                 photos.append(photo)
             }
             
             var videos: [Video] = []
-            for j in itemVideos.indices {
+            for i in itemVideos.indices {
                 let video = Video(url: itemVideos[i].absoluteString)
                 videos.append(video)
             }
             
             var voiceMemos: [VoiceMemo] = []
-            for j in itemVoiceMemos.indices {
+            for i in itemVoiceMemos.indices {
                 let voiceMemo = VoiceMemo(url: itemVoiceMemos[i].absoluteString)
                 voiceMemos.append(voiceMemo)
             }
@@ -60,7 +60,7 @@ extension BucketList {
     }
     
     // Need to modify User to remove errors
-    @discardableResult convenience init(id: Int32, name: String, createdBy: User, items: BucketListItems, shareable: Bool, sharedWith: [User], context: NSManagedObjectContext) {
+    @discardableResult convenience init(id: Int32, name: String, createdBy: User, items: BucketListItems, shareable: Bool, sharedWith: Users, context: NSManagedObjectContext) {
         self.init(context: context)
         self.id = id
         self.name = name
