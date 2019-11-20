@@ -13,11 +13,11 @@ class ProfileViewController: UIViewController {
     var user: User?
     var bucketListController: BucketListController?
     
-    @IBOutlet weak var usernameLabel: UTextField!
-    @IBOutlet weak var emailLabel: UTextField!
-    @IBOutlet weak var passwordLabel: UTextField!
-    @IBOutlet weak var sharedBucketListsLabel: UTextField!
-    @IBOutlet weak var privateBucketListsLabel: UTextField!
+    @IBOutlet weak var usernameLabel: UITextField!
+    @IBOutlet weak var emailLabel: UITextField!
+    @IBOutlet weak var passwordLabel: UITextField!
+    @IBOutlet weak var sharedBucketListsLabel: UITextField!
+    @IBOutlet weak var privateBucketListsLabel: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
