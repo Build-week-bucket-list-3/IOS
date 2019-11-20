@@ -14,6 +14,7 @@ class BucketListTableViewController: UITableViewController {
     // Side Menu
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var menuView: UIView!
+    @IBOutlet weak var createABucketListButton: UIButton!
     var isMenuShowing = false
     let menuHidingConstant: CGFloat = -245
     
@@ -24,11 +25,10 @@ class BucketListTableViewController: UITableViewController {
         
         let fetchRequest: NSFetchRequest<BucketList> = BucketList.fetchRequest()
         fetchRequest.sortDescriptors = [
-            NSSortDescriptor(key: "shareable", ascending: true),
             NSSortDescriptor(key: "name", ascending: true)
         ]
         
-        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataStack.shared.mainContext, sectionNameKeyPath: "shareable", cacheName: nil)
+        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataStack.shared.mainContext, sectionNameKeyPath: "name", cacheName: nil)
         
         frc.delegate = self
         
@@ -46,7 +46,7 @@ class BucketListTableViewController: UITableViewController {
         
         if bucketListController.bearer == nil {
             // TODO: Verify segue identifier
-            performSegue(withIdentifier: "LoginSegue", sender: self)
+            // performSegue(withIdentifier: "LoginSegue", sender: self)
             
         } else {
             DispatchQueue.main.async {
@@ -60,9 +60,16 @@ class BucketListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // side menu setup
         leadingConstraint.constant = menuHidingConstant
         menuView.layer.shadowOpacity = 1
         menuView.layer.shadowRadius = 5
+        
+        // Create a Bucket List Button setup
+        createABucketListButton.backgroundColor = .clear
+        createABucketListButton.layer.cornerRadius = 5
+        createABucketListButton.layer.borderWidth = 2
+        createABucketListButton.layer.borderColor = CGColor(srgbRed: 2, green: 127, blue: 167, alpha: 1)
         
         tableView.reloadData()
     }
@@ -70,7 +77,7 @@ class BucketListTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return fetchedResultsController.sections?.count ?? 0
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -78,45 +85,33 @@ class BucketListTableViewController: UITableViewController {
     }
     
     
-     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-     
-     // Configure the cell...
-     
-     return cell
-     }
-     
-    
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "BucketListCell", for: indexPath) as? BucketListTableViewCell else { return UITableViewCell() }
+        
+        cell.bucketList = fetchedResultsController.object(at: indexPath)
+        
+        return cell
+    }
     
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            // call BucketListController's delete method
+            
+        }
+    }
+    
+    
+    
+    
+    // MARK: - Navigation    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    
     @IBAction func openMenu(_ sender: Any) {
         
         if isMenuShowing {

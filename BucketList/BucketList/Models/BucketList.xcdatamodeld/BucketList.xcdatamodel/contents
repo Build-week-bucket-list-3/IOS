@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14903" systemVersion="19A602" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="BucketList" representedClassName="BucketList" syncable="YES" codeGenerationType="class">
-        <attribute name="createdBy" optional="YES" attributeType="Transformable" customClassName="User"/>
+        <attribute name="createdBy" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="User"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="items" optional="YES" attributeType="Transformable" customClassName="BucketListItems"/>
+        <attribute name="items" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="BucketListItems"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="shareable" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="sharedWith" optional="YES" attributeType="Transformable" customClassName="Users"/>
+        <attribute name="sharedWith" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="Users"/>
     </entity>
     <elements>
         <element name="BucketList" positionX="-63" positionY="-18" width="128" height="133"/>
