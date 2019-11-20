@@ -28,25 +28,25 @@ extension BucketList {
             let itemVoiceMemos = items.items[i].voiceMemos
             
             var journalEntries: [JournalEntry] = []
-            for j in itemJournalEntries.indices {
+            for i in itemJournalEntries.indices {
                 let journalEntry = JournalEntry(url: itemJournalEntries[i].absoluteString)
                 journalEntries.append(journalEntry)
             }
             
             var photos: [Photo] = []
-            for j in itemPhotos.indices {
+            for i in itemPhotos.indices {
                 let photo = Photo(url: itemPhotos[i].absoluteString)
                 photos.append(photo)
             }
             
             var videos: [Video] = []
-            for j in itemVideos.indices {
+            for i in itemVideos.indices {
                 let video = Video(url: itemVideos[i].absoluteString)
                 videos.append(video)
             }
             
             var voiceMemos: [VoiceMemo] = []
-            for j in itemVoiceMemos.indices {
+            for i in itemVoiceMemos.indices {
                 let voiceMemo = VoiceMemo(url: itemVoiceMemos[i].absoluteString)
                 voiceMemos.append(voiceMemo)
             }
