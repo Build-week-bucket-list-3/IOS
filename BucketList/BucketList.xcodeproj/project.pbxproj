@@ -28,6 +28,7 @@
 		A669F4EE2384B5CF00AB3F7E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A669F4ED2384B5CF00AB3F7E /* CoreDataStack.swift */; };
 		A669F4F52385119A00AB3F7E /* BucketListRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A669F4F42385119A00AB3F7E /* BucketListRepresentation.swift */; };
 		A669F4F7238511EB00AB3F7E /* BucketList+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = A669F4F6238511EB00AB3F7E /* BucketList+Convenience.swift */; };
+		A669F4F92385AE0600AB3F7E /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = A669F4F82385AE0600AB3F7E /* Users.swift */; };
 		A6FD02E023831006007F0DB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD02DF23831006007F0DB7 /* AppDelegate.swift */; };
 		A6FD02E223831006007F0DB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD02E123831006007F0DB7 /* SceneDelegate.swift */; };
 		A6FD02E723831006007F0DB7 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6FD02E523831006007F0DB7 /* Login.storyboard */; };
@@ -68,6 +69,7 @@
 		A669F4ED2384B5CF00AB3F7E /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		A669F4F42385119A00AB3F7E /* BucketListRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListRepresentation.swift; sourceTree = "<group>"; };
 		A669F4F6238511EB00AB3F7E /* BucketList+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BucketList+Convenience.swift"; sourceTree = "<group>"; };
+		A669F4F82385AE0600AB3F7E /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		A6FD02DC23831006007F0DB7 /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6FD02DF23831006007F0DB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6FD02E123831006007F0DB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				953ACE9E238436EA00C8FA44 /* User.swift */,
+				A669F4F82385AE0600AB3F7E /* Users.swift */,
 				953ACEA02384370600C8FA44 /* Bearer.swift */,
 				A669F4F32385117300AB3F7E /* BucketList */,
 				A669F4EF238510B500AB3F7E /* BucketListItem */,
@@ -408,6 +411,7 @@
 				A6FD031723845205007F0DB7 /* NetworkingHelpers.swift in Sources */,
 				A6FD03112383CD03007F0DB7 /* BLIDetailViewController.swift in Sources */,
 				953ACE95238364DA00C8FA44 /* BLinfoViewController.swift in Sources */,
+				A669F4F92385AE0600AB3F7E /* Users.swift in Sources */,
 				A6FD03132383D325007F0DB7 /* JournalTableViewController.swift in Sources */,
 				953ACEA72384376100C8FA44 /* BucketListController.swift in Sources */,
 				A669F4EE2384B5CF00AB3F7E /* CoreDataStack.swift in Sources */,

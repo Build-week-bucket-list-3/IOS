@@ -13,7 +13,7 @@ public class User: NSObject, Codable, NSCoding {
     public var password: String = ""
     public var email: String = ""
     
-    private enum Key: String {
+    enum Key: String {
         case username = "username"
         case password = "password"
         case email = "email"
