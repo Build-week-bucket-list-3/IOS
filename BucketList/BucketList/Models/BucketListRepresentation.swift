@@ -14,7 +14,7 @@ struct BucketListRepresentation: Codable {
     let createdBy: User?
     let items: [BucketListItemRepresentation]
     let shareable: Bool
-    let sharedWith: [User]?
+    let sharedWith: Users?
     
     private enum CodingKeys: String, CodingKey {
         case id = "bucketlistId"

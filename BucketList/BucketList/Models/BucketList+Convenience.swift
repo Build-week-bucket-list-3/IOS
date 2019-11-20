@@ -11,8 +11,8 @@ import CoreData
 
 extension BucketList {
     var bucketListRepresentation: BucketListRepresentation? {
-        guard let createdBy = createdBy as? User,
-            let sharedWith = sharedWith as? [User],
+        guard let createdBy = createdBy,
+            let sharedWith = sharedWith,
             let name = name,
             let items = items else { return nil }
         
@@ -60,7 +60,7 @@ extension BucketList {
     }
     
     // Need to modify User to remove errors
-    @discardableResult convenience init(id: Int32, name: String, createdBy: User, items: BucketListItems, shareable: Bool, sharedWith: [User], context: NSManagedObjectContext) {
+    @discardableResult convenience init(id: Int32, name: String, createdBy: User, items: BucketListItems, shareable: Bool, sharedWith: Users, context: NSManagedObjectContext) {
         self.init(context: context)
         self.id = id
         self.name = name

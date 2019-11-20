@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Users: NSObject, NSCoding {
+public class Users: NSObject, NSCoding, Codable {
     public var users: [User] = []
     
     enum Key: String {
