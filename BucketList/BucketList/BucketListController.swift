@@ -52,6 +52,41 @@ class BucketListController {
             return
         }
         
+        URLSession.shared.dataTask(with: request) { _, response, error in
+                if let response = response as? HTTPURLResponse,
+                    response.statusCode != 200 {
+                    completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
+                    return
+                }
+                
+                if let error = error {
+                    completion(error)
+                    return
+                }
+                
+                completion(nil)
+            }.resume()
+        }
+    
+    func signIn(username: String, password: String, completion: @escaping (Error?) -> ()) {
+        let signInURL = baseURL.appendingPathComponent("/login")
+        
+        var request = URLRequest(url: signInURL)
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let user = LoginUser(username: username, password: password)
+        
+        let jsonEncoder = JSONEncoder()
+        do {
+            let jsonData = try jsonEncoder.encode(user)
+            request.httpBody = jsonData
+        } catch {
+            print("Error encoding user object: \(error)")
+            completion(error)
+            return
+        }
+        
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let response = response as? HTTPURLResponse,
                 response.statusCode != 200 {
@@ -78,6 +113,40 @@ class BucketListController {
                 return
             }
             
+            completion(nil)
+        }.resume()
+    }
+    
+    func logout(username: String, password: String, completion: @escaping (Error?) -> ()) {
+        let signInURL = baseURL.appendingPathComponent("/logout")
+        
+        var request = URLRequest(url: signInURL)
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let user = LoginUser(username: username, password: password)
+        
+        let jsonEncoder = JSONEncoder()
+        do {
+            let jsonData = try jsonEncoder.encode(user)
+            request.httpBody = jsonData
+        } catch {
+            print("Error encoding user object: \(error)")
+            completion(error)
+            return
+        }
+        
+        URLSession.shared.dataTask(with: request) { _, response, error in
+            if let response = response as? HTTPURLResponse,
+                response.statusCode != 200 {
+                completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
+                return
+            }
+            
+            if let error = error {
+                completion(error)
+                return
+            }
             completion(nil)
         }.resume()
     }
