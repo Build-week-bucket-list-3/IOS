@@ -54,7 +54,7 @@ class SignUpViewController: UIViewController {
                 print("Error occurred during sign up: \(error)")
             } else {
                 DispatchQueue.main.async {
-                    self.dismiss(animated: true, completion: nil)
+                    
                     let alertController = UIAlertController(title: "Sign Up Successful", message: "Welcome \(user.username)", preferredStyle: .alert)
                     let alertAction = UIAlertAction(title: "Get Started", style: .default, handler: nil)
                     alertController.addAction(alertAction)
@@ -64,5 +64,16 @@ class SignUpViewController: UIViewController {
                 }
             }
         }
+        
+        bucketListController.signIn(username: username, password: password) { (error) in
+            if let error = error {
+                print("Error occurred during sign up: \(error)")
+            } else {
+                DispatchQueue.main.async {
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+        }
+        
     }
 }

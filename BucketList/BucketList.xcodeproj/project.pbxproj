@@ -21,6 +21,7 @@
 		953ACEA9238437A300C8FA44 /* BucketListItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953ACEA8238437A300C8FA44 /* BucketListItemController.swift */; };
 		9540748023847817002F38FD /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9540747F23847817002F38FD /* ProfileStoryboard.storyboard */; };
 		9561BAAA23847DA4009B3F93 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9561BAA923847DA4009B3F93 /* ProfileViewController.swift */; };
+		9561BAAC2384D551009B3F93 /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9561BAAB2384D551009B3F93 /* LoginUser.swift */; };
 		A669F4E62384B4A200AB3F7E /* BucketList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A669F4E42384B4A200AB3F7E /* BucketList.xcdatamodeld */; };
 		A669F4E82384B5B100AB3F7E /* BucketListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A669F4E72384B5B100AB3F7E /* BucketListItem.swift */; };
 		A669F4EA2384B5BC00AB3F7E /* BucketListItemRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A669F4E92384B5BC00AB3F7E /* BucketListItemRepresentation.swift */; };
@@ -59,6 +60,7 @@
 		953ACEA8238437A300C8FA44 /* BucketListItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BucketListItemController.swift; path = BucketList/BucketListItemController.swift; sourceTree = SOURCE_ROOT; };
 		9540747F23847817002F38FD /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		9561BAA923847DA4009B3F93 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9561BAAB2384D551009B3F93 /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
 		A669F4E52384B4A200AB3F7E /* BucketList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BucketList.xcdatamodel; sourceTree = "<group>"; };
 		A669F4E72384B5B100AB3F7E /* BucketListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BucketListItem.swift; sourceTree = "<group>"; };
 		A669F4E92384B5BC00AB3F7E /* BucketListItemRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BucketListItemRepresentation.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				953ACE9E238436EA00C8FA44 /* User.swift */,
+				9561BAAB2384D551009B3F93 /* LoginUser.swift */,
 				953ACEA02384370600C8FA44 /* Bearer.swift */,
 				A669F4E72384B5B100AB3F7E /* BucketListItem.swift */,
 				A669F4EB2384B5C700AB3F7E /* BucketListItems.swift */,
@@ -360,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6FD030A23834750007F0DB7 /* BucketListItemViewController.swift in Sources */,
+				9561BAAC2384D551009B3F93 /* LoginUser.swift in Sources */,
 				A669F4EA2384B5BC00AB3F7E /* BucketListItemRepresentation.swift in Sources */,
 				A6FD030823834732007F0DB7 /* CreateBucketListViewController.swift in Sources */,
 				953ACE80238322FB00C8FA44 /* SignInViewController.swift in Sources */,
