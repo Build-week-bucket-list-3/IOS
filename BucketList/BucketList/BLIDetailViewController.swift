@@ -9,6 +9,9 @@
 import UIKit
 
 class BLIDetailViewController: UIViewController {
+    
+    var bucketListController: BucketListController?
+    var item: BucketListItem?
 
     @IBOutlet weak var journalMediaSegmentedControl: UISegmentedControl!
     @IBOutlet weak var journalViewLeadingConstraint: NSLayoutConstraint!
@@ -17,6 +20,7 @@ class BLIDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.title.text = item?.name
 
         // Make journal view show by default
         journalMediaSegmentedControl.selectedSegmentIndex = 0
@@ -25,6 +29,9 @@ class BLIDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func deleteButtonTapped(_ sender: UIButton) {
+//           delete item function
+       }
     
 
     /*

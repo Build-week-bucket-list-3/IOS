@@ -12,6 +12,7 @@ class ProfileViewController: UIViewController {
     
     var user: User?
     var bucketListController: BucketListController?
+    var saveable: Bool = false
     
     @IBOutlet weak var usernameLabel: UITextField!
     @IBOutlet weak var emailLabel: UITextField!
@@ -20,23 +21,27 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var privateBucketListsLabel: UITextField!
     
     override func viewDidLoad() {
+        usernameLabel.allowsEditingTextAttributes = false
+        emailLabel.allowsEditingTextAttributes = false
+        passwordLabel.allowsEditingTextAttributes = false
+        sharedBucketListsLabel.allowsEditingTextAttributes = false
+        privateBucketListsLabel.allowsEditingTextAttributes = false
         super.viewDidLoad()
-        
     }
-    @IBAction func editButtonTapped(_ sender: UIButton) {
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    
+        guard let newUsername = usernameLabel.text, !newUsername.isEmpty, let newEmail = emailLabel.text, !newEmail.isEmpty, let newPassword = passwordLabel.text, !newPassword.isEmpty else { return }
+        
         //users/user
         //POST request to update the current user object (username, password and email)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func editButtonTapped(_ sender: UIButton) {
+        saveable.toggle()
+        usernameLabel.allowsEditingTextAttributes = true
+        emailLabel.allowsEditingTextAttributes = true
+        passwordLabel.allowsEditingTextAttributes = true
     }
-    */
-
 }

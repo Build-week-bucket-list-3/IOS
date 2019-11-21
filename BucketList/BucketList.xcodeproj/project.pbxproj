@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7FE75E48FBE82E13A1275EE7 /* Pods_BucketList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44D14F9BE488E09F70203FA8 /* Pods_BucketList.framework */; };
+		952B33B523860E420009D6ED /* BucketListItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952B33B423860E420009D6ED /* BucketListItemCollectionViewCell.swift */; };
 		953ACE80238322FB00C8FA44 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953ACE7F238322FB00C8FA44 /* SignInViewController.swift */; };
 		953ACE822383230A00C8FA44 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953ACE812383230A00C8FA44 /* SignUpViewController.swift */; };
 		953ACE852383362800C8FA44 /* Exo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 953ACE842383362800C8FA44 /* Exo-Medium.ttf */; };
@@ -52,6 +53,7 @@
 		289F55B22583061F7E5AE450 /* Pods-BucketList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BucketList.release.xcconfig"; path = "Target Support Files/Pods-BucketList/Pods-BucketList.release.xcconfig"; sourceTree = "<group>"; };
 		33C804B4D9FBA06A8F8E9401 /* Pods-BucketList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BucketList.debug.xcconfig"; path = "Target Support Files/Pods-BucketList/Pods-BucketList.debug.xcconfig"; sourceTree = "<group>"; };
 		44D14F9BE488E09F70203FA8 /* Pods_BucketList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BucketList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		952B33B423860E420009D6ED /* BucketListItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		953ACE7F238322FB00C8FA44 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		953ACE812383230A00C8FA44 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		953ACE842383362800C8FA44 /* Exo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Medium.ttf"; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				A6FD03122383D325007F0DB7 /* JournalTableViewController.swift */,
 				A6FD03142383D333007F0DB7 /* MediaCollectionViewController.swift */,
 				A69896542385F9C900D6459A /* BucketListItemCollectionViewController.swift */,
+				952B33B423860E420009D6ED /* BucketListItemCollectionViewCell.swift */,
 			);
 			path = "Bucket List Item View Controllers";
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				A6FD030823834732007F0DB7 /* CreateBucketListViewController.swift in Sources */,
 				953ACE80238322FB00C8FA44 /* SignInViewController.swift in Sources */,
 				A669F4EC2384B5C700AB3F7E /* BucketListItems.swift in Sources */,
+				952B33B523860E420009D6ED /* BucketListItemCollectionViewCell.swift in Sources */,
 				A69896512385D6EF00D6459A /* DummyBLContoller.swift in Sources */,
 				A6FD030523834700007F0DB7 /* BucketListTableViewController.swift in Sources */,
 				953ACEA9238437A300C8FA44 /* BucketListItemController.swift in Sources */,
