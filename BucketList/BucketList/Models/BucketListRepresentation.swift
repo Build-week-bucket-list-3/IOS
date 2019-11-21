@@ -9,7 +9,7 @@
 import Foundation
 
 struct BucketListRepresentation: Codable {
-    let id: Int32
+    let id: Int32?
     let name: String
     let createdBy: String?
     let userID: Int32

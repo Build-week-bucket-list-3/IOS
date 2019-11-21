@@ -10,7 +10,7 @@ import Foundation
 
 struct BucketListItem: Codable {
     
-    let id: Int32
+    let id: Int32?
     let itemName: String
     let journalEntry: String
     let photo: String?
@@ -28,8 +28,8 @@ struct BucketListItem: Codable {
         case bucketID = "bucket_id"
     }
     
-    init(id: Int32, itemName: String, journalEntry: String, photo: String? = nil, completed: Bool = false, bucketID: Int32) {
-        self.id = id
+    init(id: Int32?, itemName: String, journalEntry: String, photo: String? = nil, completed: Bool = false, bucketID: Int32) {
+        self.id = id ?? -1
         self.itemName = itemName
         self.journalEntry = journalEntry
         self.photo = photo
