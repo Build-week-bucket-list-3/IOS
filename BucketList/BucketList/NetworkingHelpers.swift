@@ -22,6 +22,7 @@ enum NetworkingError: Error {
     case unexpectedStatusCode(Int)
     case badDecode
     case badEncode
+    case noRepresentation
 }
 
 enum HeaderNames: String {
