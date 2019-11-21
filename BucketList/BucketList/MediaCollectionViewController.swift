@@ -11,6 +11,9 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class MediaCollectionViewController: UICollectionViewController {
+    
+    var bucketListController: BucketListController?
+    var item: BucketListItem?
 
     override func viewDidLoad() {
         super.viewDidLoad()

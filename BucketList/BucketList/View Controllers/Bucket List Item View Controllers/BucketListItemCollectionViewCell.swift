@@ -22,10 +22,16 @@ class BucketListItemCollectionViewCell: UICollectionViewCell {
     
     
     func updateViews() {
+        
         guard let item = item else { return }
         
-//      itemLabel.text = item.name
-//      sharedStatusLabel.text = item.privateStatus
+        itemLabel.text = item.name
+        
+        if item.shareable {
+            sharedStatusLabel.text = "Public"
+        } else {
+            sharedStatusLabel.text = "Private"
+        }
         
         if item.photos[0].url != nil {
             let data = try? Data(contentsOf: item.photos[0].url!)
