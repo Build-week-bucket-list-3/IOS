@@ -12,6 +12,7 @@ public class User: NSObject, Codable, NSCoding {
     public var username: String = ""
     public var password: String = ""
     public var email: String?
+    public var id: Int?
     
     enum Key: String {
         case username = "username"
