@@ -23,13 +23,14 @@ extension BucketList {
             let itemID = items.items[i].id
             let itemName = items.items[i].name
             let itemShareable = items.items[i].shareable
+            let itemIsCompleted = items.items[i].isCompleted
             let itemBucketListID = items.items[i].bucketListID
             let itemJournalEntries = items.items[i].journalEntries
             let itemPhotos = items.items[i].photos
             let itemVideos = items.items[i].videos
             let itemVoiceMemos = items.items[i].voiceMemos
             
-            let bucketListItem = BucketListItem(id: itemID, name: itemName, shareable: itemShareable, bucketListID: itemBucketListID, journalEntries: itemJournalEntries, photos: itemPhotos, videos: itemVideos, voiceMemos: itemVoiceMemos)
+            let bucketListItem = BucketListItem(id: itemID, name: itemName, shareable: itemShareable, isCompleted: itemIsCompleted, bucketListID: itemBucketListID, journalEntries: itemJournalEntries, photos: itemPhotos, videos: itemVideos, voiceMemos: itemVoiceMemos)
             
             bucketListitems.items.append(bucketListItem)
         }
@@ -46,6 +47,19 @@ extension BucketList {
         self.items = items
         self.shareable = shareable
         self.sharedWith = sharedWith
+    }
+    
+    @discardableResult convenience init?(bucketListRep: BucketListRepresentation, context: NSManagedObjectContext) {
+        guard let createdBy = bucketListRep.createdBy,
+            let sharedWith = bucketListRep.sharedWith else { return nil }
+        
+        self.init(id: bucketListRep.id,
+                  name: bucketListRep.name,
+                  createdBy: createdBy,
+                  items: bucketListRep.items,
+                  shareable: bucketListRep.shareable,
+                  sharedWith: sharedWith,
+                  context: context)
     }
     
 }
