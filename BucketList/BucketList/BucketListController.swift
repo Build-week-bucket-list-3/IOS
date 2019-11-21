@@ -195,19 +195,22 @@ class BucketListController {
     // MARK: - Database CRUD
     
     func fetchAllBucketListsFromServer(completion: @escaping (NetworkingError?) -> Void = { _ in }) {
-        
+        completion(nil)
     }
     
     func createBucketListToServer(bucketListRep: BucketListRepresentation, completion: @escaping (Result<BucketListRepresentation, NetworkingError>) -> Void) {
         
+        completion(.success(bucketListRep))
     }
     
     func updateBucketListToServer(bucketList: BucketList, completion: @escaping (Result<BucketList,Error>) -> Void) {
         
+        completion(.success(bucketList))
     }
     
     func deleteBucketListFromServer(bucketList: BucketList, completion: @escaping (Result<BucketList,Error>) -> Void) {
         
+        completion(.success(bucketList))
     }
     
     
