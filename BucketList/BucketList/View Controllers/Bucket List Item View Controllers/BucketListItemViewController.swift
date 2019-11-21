@@ -12,36 +12,65 @@ class BucketListItemViewController: UIViewController {
     
     var bucketListController: BucketListController?
     
-    var bucketList: BucketList?
+    var bucketList: BucketList? {
+        didSet {
+            // fetchitems()
+            self.title = bucketList?.name
+        }
+    }
+    
+    var items: [BucketListItem] = []
+    var selectedItem: BucketListItem?
+    
+    @IBOutlet weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func deleteButtonTapped(_ sender: UIButton) {
-        //users/bucketlist DELETE request 
+        self.collectionView.dataSource = self
+        self.collectionView.delegate = self
     }
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "EmbeddedSegue" {
-            if let collectionVC = segue.destination as? BucketListItemCollectionViewController {
-                collectionVC.bucketListController = bucketListController
-                collectionVC.bucketList = bucketList
-            }
-        } else if segue.identifier == "CreateBLISegue" {
+         if segue.identifier == "CreateBLISegue" {
             if let createVC = segue.destination as? CreateBucketListItemViewController {
                 createVC.bucketListController = bucketListController
                 createVC.bucketList = bucketList
             }
-        } else if segue.identifier == "BLinfoSegue" {
-            if let infoVC = segue.destination as? BLinfoViewController {
+        } else if segue.identifier == "EditInfoSegue" {
+            if let infoVC = segue.destination as? CreateBucketListViewController {
                 infoVC.bucketListController = bucketListController
+                infoVC.bucketList = bucketList
+            }
+        } else if segue.identifier == "ItemDetailSegue" {
+            if let createVC = segue.destination as? BLIDetailViewController {
+                createVC.bucketListController = bucketListController
+                createVC.bucketList = bucketList
+                createVC.item = selectedItem
             }
         }
     }
+}
+
+extension BucketListItemViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as? BucketListItemCollectionViewCell else { return UICollectionViewCell()}
+        
+        cell.item = items[indexPath.item]
+        
+        return cell
+    }
+}
+
+extension BucketListItemViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.selectedItem = items[indexPath.item]
+        performSegue(withIdentifier: "ItemDetailSegue", sender: collectionView.cellForItem(at: indexPath))
+       }
 }
