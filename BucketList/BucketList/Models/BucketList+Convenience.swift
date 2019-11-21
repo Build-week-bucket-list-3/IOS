@@ -39,9 +39,9 @@ extension BucketList {
     }
     
     // Need to modify User to remove errors
-    @discardableResult convenience init(id: Int32, name: String, createdBy: User, items: BucketListItems, shareable: Bool, sharedWith: Users, context: NSManagedObjectContext) {
+    @discardableResult convenience init(id: Int32?, name: String, createdBy: User, items: BucketListItems?, shareable: Bool, sharedWith: Users?, context: NSManagedObjectContext) {
         self.init(context: context)
-        self.id = id
+        self.id = id ?? 1
         self.name = name
         self.createdBy = createdBy
         self.items = items
@@ -50,12 +50,11 @@ extension BucketList {
     }
     
     @discardableResult convenience init?(bucketListRep: BucketListRepresentation, context: NSManagedObjectContext) {
-        guard let createdBy = bucketListRep.createdBy,
-            let sharedWith = bucketListRep.sharedWith else { return nil }
+        guard let sharedWith = bucketListRep.sharedWith else { return nil }
         
         self.init(id: bucketListRep.id,
                   name: bucketListRep.name,
-                  createdBy: createdBy,
+                  createdBy: bucketListRep.createdBy,
                   items: bucketListRep.items,
                   shareable: bucketListRep.shareable,
                   sharedWith: sharedWith,

@@ -16,21 +16,9 @@ class BucketListController {
     
     var bearer: Bearer?
     
-    let bucketListItemController = BucketListItemController()
-    
+    var loggedInUser: User = User(username: "test", password: "test")
+        
     let baseURL = URL(string: "https://gcgsauce-bucketlist.herokuapp.com")!
-    
-    
-    init() {
-        bucketListItemController.bearer = self.bearer
-    }
-    
-    
-    // MARK: - BucketList CRUD Methods
-    
-    
-    
-    
     
     // MARK: - User methods
     
@@ -85,6 +73,7 @@ class BucketListController {
                 case .success(let (credential, _, _)):
                     print("It worked the token is \(credential.oauthToken)")
                     self.bearer?.token = credential.oauthToken
+                    self.loggedInUser = User(username: username, password: password)
                 case .failure:
                     print("Error fetching token.")
                 }
@@ -131,9 +120,9 @@ class BucketListController {
     
     // MARK: - Core Data CRUD
     
-    func createBucketList(id: Int32, name: String, createdBy: User, items: BucketListItems, shareable: Bool, sharedWith: Users, context: NSManagedObjectContext) {
-        
-        let bucketListRepresentation = BucketListRepresentation(id: id, name: name, createdBy: createdBy, items: items, shareable: shareable, sharedWith: sharedWith)
+    func createBucketList(name: String, shareable: Bool, context: NSManagedObjectContext) {
+        // guard let loggedInUser = loggedInUser else { return }
+        let bucketListRepresentation = BucketListRepresentation(id: nil, name: name, createdBy: loggedInUser, items: nil, shareable: shareable, sharedWith: nil)
         
         createBucketListToServer(bucketListRep: bucketListRepresentation) { (result) in
             do {
