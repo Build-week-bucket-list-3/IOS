@@ -108,8 +108,22 @@ class BucketListTableViewController: UITableViewController {
     
     // MARK: - Navigation    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "LogInSegue" {
+            if let loginVC = segue.destination as? SignInViewController {
+            loginVC.bucketListController = bucketListController
+            }
+        } else if segue.identifier == "CreateBucketListSegue" {
+            if let createBLVC = segue.destination as? CreateBucketListViewController {
+                createBLVC.bucketListController = bucketListController
+            }
+        } else if segue.identifier == "BLDetailViewSegue" {
+            if let bucketListItemVC = segue.destination as? BucketListItemViewController,
+                let indexPath = tableView.indexPathForSelectedRow {
+                // TODO: check if BucketListItemViewController has bucketList variable
+                // bucketListItemVC.bucketList = fetchedResultsController.object(at: indexPath)
+            }
+        }
+        
     }
     
     @IBAction func openMenu(_ sender: Any) {

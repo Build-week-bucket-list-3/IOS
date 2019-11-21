@@ -15,7 +15,11 @@ class BucketListTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var shareableLabel: UILabel!
     
-    var bucketList: BucketList?
+    var bucketList: BucketList? {
+        didSet {
+            updateViews()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +30,10 @@ class BucketListTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    private func updateViews() {
+        
     }
 
 }

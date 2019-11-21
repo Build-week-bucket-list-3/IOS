@@ -9,6 +9,10 @@
 import UIKit
 
 class CreateBucketListViewController: UIViewController {
+    @IBOutlet weak var nameTextFIeld: UITextField!
+    @IBOutlet weak var shareableSegementedControl: UISegmentedControl!
+    
+    var bucketListController: BucketListController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,4 +31,7 @@ class CreateBucketListViewController: UIViewController {
     }
     */
 
+    @IBAction func createNewBucketList(_ sender: Any) {
+        
+    }
 }

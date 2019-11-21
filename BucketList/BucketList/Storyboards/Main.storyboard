@@ -173,6 +173,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" red="0.0075939223170000004" green="0.49731212850000001" blue="0.6491755843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="createNewBucketList:" destination="FdM-Zf-g4U" eventType="touchUpInside" id="chA-KM-WQi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -194,6 +197,10 @@
                         <viewLayoutGuide key="safeArea" id="nRs-ll-Sho"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create a Bucket List" id="kPU-GM-iAz"/>
+                    <connections>
+                        <outlet property="nameTextFIeld" destination="gqc-tI-7ur" id="hrl-zP-mUc"/>
+                        <outlet property="shareableSegementedControl" destination="R9D-np-2Ta" id="mtA-Mi-IJ8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B2l-HD-qE1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
