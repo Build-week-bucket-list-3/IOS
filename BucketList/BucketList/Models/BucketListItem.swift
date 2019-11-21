@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class BucketListItem: NSObject, NSCoding {
+public class BucketListItem: NSObject, NSCoding, Codable {
     
     public var id: Int32 = 0
     public var name: String = ""

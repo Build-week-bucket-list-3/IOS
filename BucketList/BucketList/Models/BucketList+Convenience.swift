@@ -16,44 +16,22 @@ extension BucketList {
             let name = name,
             let items = items else { return nil }
         
-        var bucketListitems: [BucketListItemRepresentation] = []
+        var bucketListitems = BucketListItems()
         
         for i in items.items.indices {
             
             let itemID = items.items[i].id
+            let itemName = items.items[i].name
+            let itemShareable = items.items[i].shareable
             let itemBucketListID = items.items[i].bucketListID
             let itemJournalEntries = items.items[i].journalEntries
             let itemPhotos = items.items[i].photos
             let itemVideos = items.items[i].videos
             let itemVoiceMemos = items.items[i].voiceMemos
             
-            var journalEntries: [JournalEntry] = []
-            for i in itemJournalEntries.indices {
-                let journalEntry = JournalEntry(url: itemJournalEntries[i].absoluteString)
-                journalEntries.append(journalEntry)
-            }
+            let bucketListItem = BucketListItem(id: itemID, name: itemName, shareable: itemShareable, bucketListID: itemBucketListID, journalEntries: itemJournalEntries, photos: itemPhotos, videos: itemVideos, voiceMemos: itemVoiceMemos)
             
-            var photos: [Photo] = []
-            for i in itemPhotos.indices {
-                let photo = Photo(url: itemPhotos[i].absoluteString)
-                photos.append(photo)
-            }
-            
-            var videos: [Video] = []
-            for i in itemVideos.indices {
-                let video = Video(url: itemVideos[i].absoluteString)
-                videos.append(video)
-            }
-            
-            var voiceMemos: [VoiceMemo] = []
-            for i in itemVoiceMemos.indices {
-                let voiceMemo = VoiceMemo(url: itemVoiceMemos[i].absoluteString)
-                voiceMemos.append(voiceMemo)
-            }
-            
-            let bucketListItem = BucketListItemRepresentation(id: itemID, bucketListID: itemBucketListID, journalEntries: journalEntries, photos: photos, videos: videos, voiceMemos: voiceMemos)
-            
-            bucketListitems.append(bucketListItem)
+            bucketListitems.items.append(bucketListItem)
         }
         
         return BucketListRepresentation(id: id, name: name, createdBy: createdBy, items: bucketListitems, shareable: shareable, sharedWith: sharedWith)

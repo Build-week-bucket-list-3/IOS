@@ -12,7 +12,7 @@ struct BucketListRepresentation: Codable {
     let id: Int32
     let name: String
     let createdBy: User?
-    let items: [BucketListItemRepresentation]
+    let items: BucketListItems
     let shareable: Bool
     let sharedWith: Users?
     

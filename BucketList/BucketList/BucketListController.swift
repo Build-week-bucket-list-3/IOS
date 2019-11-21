@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 import OAuthSwift
 
 class BucketListController {
@@ -126,21 +127,16 @@ class BucketListController {
         }.resume()
         self.bearer = nil
     }
+    
+    
+    // MARK: - Core Data CRUD
+    
+    func createBucketList(id: Int32, name: String, createdBy: User, items: BucketListItems, shareable: Bool, sharedWith: Users, context: NSManagedObjectContext) {
+        
+        let bucketListRepresentation = BucketListRepresentation(id: id, name: name, createdBy: createdBy, items: items, shareable: shareable, sharedWith: sharedWith)
+    }
+    
+    
+    
+    
 }
-
-
-//// For GiPyo
-//override func viewDidAppear(_ animated: Bool) {
-//    super.viewDidAppear(animated)
-//    tableView.reloadData()
-//    if BucketListController.bearer == nil {
-////       send to modal Login view performSegue(withIdentifier: "LogInSegue", sender: self)
-//    } else {
-////       fetch the bucket lists
-//    }
-//}
-//
-//if segue.identifier == "LogInSegue" {
-//if let loginVC = segue.destination as? SignInViewController {
-//    loginVC.bucketListController = bucketListController
-//}

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class BucketListItems: NSObject, NSCoding {
+public class BucketListItems: NSObject, NSCoding, Codable {
     
     public var items: [BucketListItem] = []
     
