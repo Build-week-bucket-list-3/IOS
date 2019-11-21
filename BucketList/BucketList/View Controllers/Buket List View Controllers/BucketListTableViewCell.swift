@@ -23,7 +23,11 @@ class BucketListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        uiView.layer.shadowColor = UIColor.black.cgColor
+        uiView.layer.shadowOpacity = 1
+        uiView.layer.shadowOffset = .zero
+        uiView.layer.shadowRadius = 10
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -33,7 +37,35 @@ class BucketListTableViewCell: UITableViewCell {
     }
     
     private func updateViews() {
+        guard let bucketList = bucketList else { return }
         
+        nameLabel.text = bucketList.name
+        
+        switch bucketList.shareable {
+        case true:
+            shareableLabel.text = "Public"
+        case false:
+            shareableLabel.text = "Private"
+        }
+        
+        if let imageURL = bucketList.items?.items[0].photos[0] {
+            do {
+                let image = try UIImage(withContentsOfURL: imageURL)
+                blImageView.image = image
+            } catch {
+                NSLog("Error converting image URL: \(error)")
+            }
+        }
+    }
+
+}
+
+extension UIImage {
+
+    convenience init?(withContentsOfURL url: URL) throws {
+        let imageData = try Data(contentsOf: url)
+    
+        self.init(data: imageData)
     }
 
 }
