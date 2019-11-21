@@ -9,10 +9,10 @@
 import Foundation
 
 struct BucketListRepresentation: Codable {
-    let id: Int32
+    let id: Int32?
     let name: String
-    let createdBy: User?
-    let items: [BucketListItemRepresentation]
+    let createdBy: User
+    let items: BucketListItems?
     let shareable: Bool
     let sharedWith: Users?
     

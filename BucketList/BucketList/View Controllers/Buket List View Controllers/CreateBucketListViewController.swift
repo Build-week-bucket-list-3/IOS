@@ -32,6 +32,19 @@ class CreateBucketListViewController: UIViewController {
     */
 
     @IBAction func createNewBucketList(_ sender: Any) {
+        guard let name = nameTextFIeld.text, !name.isEmpty,
+            let bucketListController = bucketListController else { return }
         
+        var shareable: Bool!
+        switch shareableSegementedControl.selectedSegmentIndex {
+        case 0:
+            shareable = false
+        default:
+            shareable = true
+        }
+        
+        bucketListController.createBucketList(name: name, shareable: shareable, context: CoreDataStack.shared.mainContext)
+        
+        navigationController?.popViewController(animated: true)
     }
 }

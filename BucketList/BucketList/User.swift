@@ -11,7 +11,7 @@ import Foundation
 public class User: NSObject, Codable, NSCoding {
     public var username: String = ""
     public var password: String = ""
-    public var email: String = ""
+    public var email: String?
     
     enum Key: String {
         case username = "username"
@@ -19,7 +19,7 @@ public class User: NSObject, Codable, NSCoding {
         case email = "email"
     }
     
-    init(username: String, password: String, email: String) {
+    init(username: String, password: String, email: String? = "") {
         self.username = username
         self.password = password
         self.email = email
@@ -38,7 +38,7 @@ public class User: NSObject, Codable, NSCoding {
     public required convenience init?(coder: NSCoder) {
         guard let decodedUsername = coder.decodeObject(forKey: Key.username.rawValue) as? String,
             let decodedPassword = coder.decodeObject(forKey: Key.password.rawValue) as? String,
-            let decodedEmail = coder.decodeObject(forKey: Key.email.rawValue) as? String else {
+            let decodedEmail = coder.decodeObject(forKey: Key.email.rawValue) as? String? else {
                 return nil
         }
         

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 import OAuthSwift
 
 class BucketListController {
@@ -15,27 +16,15 @@ class BucketListController {
     
     var bearer: Bearer?
     
-    let bucketListItemController = BucketListItemController()
-    
+    var loggedInUser: User = User(username: "test", password: "test")
+        
     let baseURL = URL(string: "https://gcgsauce-bucketlist.herokuapp.com")!
-    
-    
-    init() {
-        bucketListItemController.bearer = self.bearer
-    }
-
-    
-    // MARK: - BucketList CRUD Methods
-    
-    
-    
-    
     
     // MARK: - User methods
     
     //add login and logout and edit
     
-        
+    
     func signUp(with user: User, completion: @escaping (Error?) -> ()) {
         let signUpURL = baseURL.appendingPathComponent("/createnewuser")
         
@@ -54,20 +43,20 @@ class BucketListController {
         }
         
         URLSession.shared.dataTask(with: request) { _, response, error in
-                if let response = response as? HTTPURLResponse,
-                    response.statusCode != 200 {
-                    completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
-                    return
-                }
-                
-                if let error = error {
-                    completion(error)
-                    return
-                }
-                
-                completion(nil)
-            }.resume()
-        }
+            if let response = response as? HTTPURLResponse,
+                response.statusCode != 200 {
+                completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
+                return
+            }
+            
+            if let error = error {
+                completion(error)
+                return
+            }
+            
+            completion(nil)
+        }.resume()
+    }
     
     func signIn(username: String, password: String) {
         let oauthswift = OAuth2Swift(
@@ -84,13 +73,14 @@ class BucketListController {
                 case .success(let (credential, _, _)):
                     print("It worked the token is \(credential.oauthToken)")
                     self.bearer?.token = credential.oauthToken
+                    self.loggedInUser = User(username: username, password: password)
                 case .failure:
                     print("Error fetching token.")
                 }
         }
     }
     
-
+    
     
     func logout(username: String, password: String, completion: @escaping (Error?) -> ()) {
         let signInURL = baseURL.appendingPathComponent("/logout")
@@ -126,21 +116,92 @@ class BucketListController {
         }.resume()
         self.bearer = nil
     }
+    
+    
+    // MARK: - Core Data CRUD
+    
+    func createBucketList(name: String, shareable: Bool, context: NSManagedObjectContext) {
+        // guard let loggedInUser = loggedInUser else { return }
+        let bucketListRepresentation = BucketListRepresentation(id: nil, name: name, createdBy: loggedInUser, items: nil, shareable: shareable, sharedWith: nil)
+        
+        createBucketListToServer(bucketListRep: bucketListRepresentation) { (result) in
+            do {
+                let bucketListRep = try result.get()
+                BucketList(bucketListRep: bucketListRep, context: context)
+                CoreDataStack.shared.save(context: context)
+            } catch {
+                NSLog("Error creating a new bucket list to server: \(error)")
+            }
+        }
+    }
+    
+    func createBucketListItem(bucketList: BucketList, id: Int32, name: String, shareable: Bool, isCompleted: Bool, bucketListID: Int32, journalEntries: [URL], photos: [URL], videos: [URL], voiceMemos: [URL], context: NSManagedObjectContext) {
+        
+        let bucketListItem = BucketListItem(id: id, name: name, shareable: shareable, isCompleted: isCompleted, bucketListID: bucketListID, journalEntries: journalEntries, photos: photos, videos: videos, voiceMemos: voiceMemos)
+        bucketList.items?.items.append(bucketListItem)
+        
+        updateBucketListToServer(bucketList: bucketList) { (result) in
+            do {
+                _ = try result.get()
+                CoreDataStack.shared.save(context: context)
+            } catch {
+                NSLog("Error updating the bucket list item to server: \(error)")
+            }
+        }
+    }
+    
+    func updateBucketList(bucketList: BucketList, name: String, items: BucketListItems, shareable: Bool, sharedWith: Users, context: NSManagedObjectContext) {
+        
+        bucketList.name = name
+        bucketList.items = items
+        bucketList.shareable = shareable
+        bucketList.sharedWith = sharedWith
+        
+        updateBucketListToServer(bucketList: bucketList) { (result) in
+            do {
+                _ = try result.get()
+                CoreDataStack.shared.save(context: context)
+            } catch {
+                NSLog("Error updating the bucket list to server: \(error)")
+            }
+        }
+    }
+    
+    func deleteBucketList(bucketList: BucketList, context: NSManagedObjectContext) {
+        context.performAndWait {
+            deleteBucketListFromServer(bucketList: bucketList) { (result) in
+                do {
+                    let bucketList = try result.get()
+                    context.delete(bucketList)
+                    CoreDataStack.shared.save(context: context)
+                } catch {
+                    NSLog("Error deleting a bucket list from server: \(error)")
+                }
+            }
+        }
+    }
+    
+    // MARK: - Database CRUD
+    
+    func fetchAllBucketListsFromServer(completion: @escaping (NetworkingError?) -> Void = { _ in }) {
+        completion(nil)
+    }
+    
+    func createBucketListToServer(bucketListRep: BucketListRepresentation, completion: @escaping (Result<BucketListRepresentation, NetworkingError>) -> Void) {
+        
+        completion(.success(bucketListRep))
+    }
+    
+    func updateBucketListToServer(bucketList: BucketList, completion: @escaping (Result<BucketList,Error>) -> Void) {
+        
+        completion(.success(bucketList))
+    }
+    
+    func deleteBucketListFromServer(bucketList: BucketList, completion: @escaping (Result<BucketList,Error>) -> Void) {
+        
+        completion(.success(bucketList))
+    }
+    
+    
+    
 }
-
-
-//// For GiPyo
-//override func viewDidAppear(_ animated: Bool) {
-//    super.viewDidAppear(animated)
-//    tableView.reloadData()
-//    if BucketListController.bearer == nil {
-////       send to modal Login view performSegue(withIdentifier: "LogInSegue", sender: self)
-//    } else {
-////       fetch the bucket lists
-//    }
-//}
-//
-//if segue.identifier == "LogInSegue" {
-//if let loginVC = segue.destination as? SignInViewController {
-//    loginVC.bucketListController = bucketListController
-//}

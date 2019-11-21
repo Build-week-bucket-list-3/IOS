@@ -74,10 +74,16 @@ class BucketListTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+        
+    }
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return fetchedResultsController.sections?.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -92,7 +98,6 @@ class BucketListTableViewController: UITableViewController {
         
         return cell
     }
-    
     
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

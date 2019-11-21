@@ -58,7 +58,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="200" id="8lS-wv-fFa" customClass="BucketListTableViewCell" customModule="BucketList" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BucketListCell" rowHeight="200" id="8lS-wv-fFa" customClass="BucketListTableViewCell" customModule="BucketList" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="163" width="414" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8lS-wv-fFa" id="w81-0d-Cgl">
@@ -118,8 +118,8 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="6MA-dj-KeT" id="gmD-im-9yW"/>
-                            <outlet property="delegate" destination="6MA-dj-KeT" id="rmA-NH-D6W"/>
+                            <outlet property="dataSource" destination="6MA-dj-KeT" id="fVB-q5-3zk"/>
+                            <outlet property="delegate" destination="6MA-dj-KeT" id="ycD-4L-4h6"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Bucket List" id="IOi-P5-GJ4">

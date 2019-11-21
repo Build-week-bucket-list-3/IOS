@@ -10,6 +10,9 @@ import Foundation
 
 struct BucketListItemRepresentation: Codable {
     let id: Int32
+    let name: String
+    let shareable: Bool
+    let isCompleted: Bool
     let bucketListID: Int32
     let journalEntries: [JournalEntry]
     let photos: [Photo]
@@ -18,6 +21,9 @@ struct BucketListItemRepresentation: Codable {
     
     private enum CodingKeys: String, CodingKey {
         case id
+        case name
+        case shareable
+        case isCompleted
         case bucketListID
         case journalEntries
         case photos
