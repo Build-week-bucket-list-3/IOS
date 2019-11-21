@@ -16,9 +16,9 @@ class BucketListController {
     
     var bearer: Bearer?
     
-    var loggedInUser: User = User(username: "test", password: "test")
+    var loggedInUser: User?
         
-    let baseURL = URL(string: "https://gcgsauce-bucketlist.herokuapp.com")!
+    let baseURL = URL(string: "https://bw-bucketlist.herokuapp.com/api")!
     
     // MARK: - User methods
     
@@ -26,10 +26,10 @@ class BucketListController {
     
     
     func signUp(with user: User, completion: @escaping (Error?) -> ()) {
-        let signUpURL = baseURL.appendingPathComponent("/createnewuser")
+        let signUpURL = baseURL.appendingPathComponent("/users/register")
         
         var request = URLRequest(url: signUpURL)
-        request.httpMethod = HTTPMethod.post.rawValue
+        request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         let jsonEncoder = JSONEncoder()
@@ -58,38 +58,12 @@ class BucketListController {
         }.resume()
     }
     
-    func signIn(username: String, password: String) {
-        let oauthswift = OAuth2Swift(
-            consumerKey:    "lambda-client",
-            consumerSecret: "lambda-secret",
-            authorizeUrl:   "https://gcgsauce-bucketlist.herokuapp.com/login",
-            accessTokenUrl: "https://gcgsauce-bucketlist.herokuapp.com/login",
-            responseType:   "token"
-        )
-        let _ = oauthswift.authorize(
-            withCallbackURL: URL(string: "oauth-swift://gcgsauce-bucketlist.herokuapp.com")!,
-            scope: "", state: "") { result in
-                switch result {
-                case .success(let (credential, _, _)):
-                    print("It worked the token is \(credential.oauthToken)")
-                    self.bearer?.token = credential.oauthToken
-                    self.loggedInUser = User(username: username, password: password)
-                case .failure:
-                    print("Error fetching token.")
-                }
-        }
-    }
-    
-    
-    
-    func logout(username: String, password: String, completion: @escaping (Error?) -> ()) {
-        let signInURL = baseURL.appendingPathComponent("/logout")
+    func signIn(with user: User, completion: @escaping (Error?) -> ()) {
+        let signInURL = baseURL.appendingPathComponent("/users/login")
         
         var request = URLRequest(url: signInURL)
-        request.httpMethod = "GET"
+        request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        let user = LoginUser(username: username, password: password)
         
         let jsonEncoder = JSONEncoder()
         do {
@@ -101,7 +75,7 @@ class BucketListController {
             return
         }
         
-        URLSession.shared.dataTask(with: request) { _, response, error in
+        URLSession.shared.dataTask(with: request) { data, response, error in
             if let response = response as? HTTPURLResponse,
                 response.statusCode != 200 {
                 completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
@@ -112,16 +86,75 @@ class BucketListController {
                 completion(error)
                 return
             }
+            
+            guard let data = data else {
+                completion(NSError())
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            do {
+                self.bearer = try decoder.decode(Bearer.self, from: data)
+                self.loggedInUser = user
+            } catch {
+                print("Error decoding bearer object: \(error)")
+                completion(error)
+                return
+            }
+            
             completion(nil)
         }.resume()
-        self.bearer = nil
+    }
+    
+    
+    
+    func setUserID(token: Bearer, user: User, completion: @escaping (Error?) -> ()) {
+        let allUsersURL = baseURL.appendingPathComponent("/users")
+        
+        var request = URLRequest(url: allUsersURL)
+        request.httpMethod = "GET"
+        request.setValue("\(token.token)", forHTTPHeaderField: "Authorization")
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let response = response as? HTTPURLResponse,
+                response.statusCode != 200 {
+                completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
+                return
+            }
+            
+            if let error = error {
+                completion(error)
+                return
+            }
+            
+            guard let data = data else {
+                completion(NSError())
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            do {
+                let allUsers = try decoder.decode([User].self, from: data)
+                for u in allUsers {
+                    if u.username == user.username {
+                        self.loggedInUser?.id = u.id
+                    }
+                }
+            } catch {
+                print("Error decoding bearer object: \(error)")
+                completion(error)
+                return
+            }
+            
+            completion(nil)
+        }.resume()
     }
     
     
     // MARK: - Core Data CRUD
     
     func createBucketList(name: String, shareable: Bool, context: NSManagedObjectContext) {
-        // guard let loggedInUser = loggedInUser else { return }
+        guard let loggedInUser = loggedInUser else { return }
         let bucketListRepresentation = BucketListRepresentation(id: nil, name: name, createdBy: loggedInUser, items: nil, shareable: shareable, sharedWith: nil)
         
         createBucketListToServer(bucketListRep: bucketListRepresentation) { (result) in
