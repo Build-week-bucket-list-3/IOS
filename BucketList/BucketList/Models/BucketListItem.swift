@@ -13,6 +13,7 @@ public class BucketListItem: NSObject, NSCoding, Codable {
     public var id: Int32 = 0
     public var name: String = ""
     public var shareable: Bool = false
+    public var isCompleted: Bool = false
     public var bucketListID: Int32 = 0
     public var journalEntries: [URL] = []
     public var photos: [URL] = []
@@ -25,6 +26,7 @@ public class BucketListItem: NSObject, NSCoding, Codable {
         case id = "id"
         case name
         case shareable
+        case isCompleted
         case bucketListID = "bycket_list_ID"
         case journalEntries
         case photos
@@ -32,10 +34,11 @@ public class BucketListItem: NSObject, NSCoding, Codable {
         case voiceMemos
     }
     
-    init(id: Int32, name: String, shareable: Bool, bucketListID: Int32, journalEntries: [URL], photos: [URL], videos: [URL], voiceMemos: [URL]) {
+    init(id: Int32, name: String, shareable: Bool, isCompleted: Bool, bucketListID: Int32, journalEntries: [URL], photos: [URL], videos: [URL], voiceMemos: [URL]) {
         self.id = id
         self.name = name
         self.shareable = shareable
+        self.isCompleted = isCompleted
         self.bucketListID = bucketListID
         self.journalEntries = journalEntries
         self.photos = photos
@@ -51,6 +54,7 @@ public class BucketListItem: NSObject, NSCoding, Codable {
         coder.encode(id, forKey: Key.id.rawValue)
         coder.encode(name, forKey: Key.name.rawValue)
         coder.encode(shareable, forKey: Key.shareable.rawValue)
+        coder.encode(isCompleted, forKey: Key.isCompleted.rawValue)
         coder.encode(bucketListID, forKey: Key.bucketListID.rawValue)
         coder.encode(journalEntries, forKey: Key.journalEntries.rawValue)
         coder.encode(photos, forKey: Key.photos.rawValue)
@@ -62,6 +66,7 @@ public class BucketListItem: NSObject, NSCoding, Codable {
         let dID = coder.decodeInt32(forKey: Key.id.rawValue)
         let dBucketListID = coder.decodeInt32(forKey: Key.bucketListID.rawValue)
         let dShareable = coder.decodeBool(forKey: Key.shareable.rawValue)
+        let dIsCompleted = coder.decodeBool(forKey: Key.isCompleted.rawValue)
         
         guard let dJournalEntries = coder.decodeObject(forKey: Key.journalEntries.rawValue) as? [URL],
             let dPhotos = coder.decodeObject(forKey: Key.photos.rawValue) as? [URL],
@@ -71,7 +76,7 @@ public class BucketListItem: NSObject, NSCoding, Codable {
                 return nil
         }
         
-        self.init(id: dID, name: dName, shareable: dShareable, bucketListID: dBucketListID, journalEntries: dJournalEntries, photos: dPhotos, videos: dVideos, voiceMemos: dVoiceMemos)
+        self.init(id: dID, name: dName, shareable: dShareable, isCompleted: dIsCompleted, bucketListID: dBucketListID, journalEntries: dJournalEntries, photos: dPhotos, videos: dVideos, voiceMemos: dVoiceMemos)
     }
     
     
