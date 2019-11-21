@@ -12,35 +12,43 @@ class BucketListItemViewController: UIViewController {
     
     var bucketListController: BucketListController?
     
-    var bucketList: BucketList?
+    var bucketList: BucketList? {
+        didSet {
+            // fetchitems()
+            self.title = bucketList?.name
+        }
+    }
+    
+    var items: [BucketListItem] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func deleteButtonTapped(_ sender: UIButton) {
-        //users/bucketlist DELETE request 
     }
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EmbeddedSegue" {
             if let collectionVC = segue.destination as? BucketListItemCollectionViewController {
                 collectionVC.bucketListController = bucketListController
                 collectionVC.bucketList = bucketList
+                collectionVC.items = items
             }
         } else if segue.identifier == "CreateBLISegue" {
             if let createVC = segue.destination as? CreateBucketListItemViewController {
                 createVC.bucketListController = bucketListController
                 createVC.bucketList = bucketList
             }
-        } else if segue.identifier == "BLinfoSegue" {
-            if let infoVC = segue.destination as? BLinfoViewController {
+        } else if segue.identifier == "EditInfoSegue" {
+            if let infoVC = segue.destination as? CreateBucketListViewController {
                 infoVC.bucketListController = bucketListController
+                infoVC.bucketList = bucketList
+            }
+        } else if segue.identifier == "ItemDetailSegue" {
+            if let createVC = segue.destination as? BLIDetailViewController {
+                createVC.bucketListController = bucketListController
+                createVC.bucketList = bucketList
+                createVC.item = item
             }
         }
     }

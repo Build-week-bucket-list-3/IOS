@@ -13,6 +13,7 @@ class CreateBucketListViewController: UIViewController {
     @IBOutlet weak var shareableSegementedControl: UISegmentedControl!
     
     var bucketListController: BucketListController?
+    var bucketList: BucketList?
 
     override func viewDidLoad() {
         super.viewDidLoad()

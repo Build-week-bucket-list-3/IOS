@@ -15,6 +15,8 @@ class BucketListItemCollectionViewController: UICollectionViewController {
     var bucketListController: BucketListController?
     
     var bucketList: BucketList?
+    
+    var items: [BucketListItem]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
