@@ -9,19 +9,15 @@
 import Foundation
 
 struct BucketListRepresentation: Codable {
-    let id: Int32?
+    let id: Int32
     let name: String
-    let createdBy: User
-    let items: BucketListItems?
-    let shareable: Bool
-    let sharedWith: Users?
+    let createdBy: String?
+    let userID: Int32
     
     private enum CodingKeys: String, CodingKey {
-        case id = "bucketlistId"
-        case name = "bucketlistName"
-        case createdBy
-        case items = "entries"
-        case shareable
-        case sharedWith
+        case id
+        case name = "title"
+        case createdBy = "created_by"
+        case userID = "user_id"
     }
 }

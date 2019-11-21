@@ -15,6 +15,7 @@ class BucketListTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var shareableLabel: UILabel!
     
+    var bucketListItems: [BucketListItem]?
     var bucketList: BucketList? {
         didSet {
             updateViews()
@@ -37,18 +38,18 @@ class BucketListTableViewCell: UITableViewCell {
     }
     
     private func updateViews() {
-        guard let bucketList = bucketList else { return }
+        guard let bucketList = bucketList, let bucketListItems = bucketListItems else { return }
         
         nameLabel.text = bucketList.name
         
-        switch bucketList.shareable {
-        case true:
-            shareableLabel.text = "Public"
-        case false:
-            shareableLabel.text = "Private"
-        }
+//        switch bucketList.shareable {
+//        case true:
+//            shareableLabel.text = "Public"
+//        case false:
+//            shareableLabel.text = "Private"
+//        }
         
-        if let imageURL = bucketList.items?.items[0].photos[0] {
+        if !bucketListItems.isEmpty, let imageString = bucketListItems[0].photo, let imageURL = URL(string: imageString) {
             do {
                 let image = try UIImage(withContentsOfURL: imageURL)
                 blImageView.image = image
