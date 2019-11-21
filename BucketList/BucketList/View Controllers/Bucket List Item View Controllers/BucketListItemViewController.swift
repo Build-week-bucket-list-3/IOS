@@ -20,21 +20,20 @@ class BucketListItemViewController: UIViewController {
     }
     
     var items: [BucketListItem] = []
+    var selectedItem: BucketListItem?
+    
+    @IBOutlet weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.collectionView.dataSource = self
+        self.collectionView.delegate = self
     }
     
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "EmbeddedSegue" {
-            if let collectionVC = segue.destination as? BucketListItemCollectionViewController {
-                collectionVC.bucketListController = bucketListController
-                collectionVC.bucketList = bucketList
-                collectionVC.items = items
-            }
-        } else if segue.identifier == "CreateBLISegue" {
+         if segue.identifier == "CreateBLISegue" {
             if let createVC = segue.destination as? CreateBucketListItemViewController {
                 createVC.bucketListController = bucketListController
                 createVC.bucketList = bucketList
@@ -48,8 +47,30 @@ class BucketListItemViewController: UIViewController {
             if let createVC = segue.destination as? BLIDetailViewController {
                 createVC.bucketListController = bucketListController
                 createVC.bucketList = bucketList
-                createVC.item = item
+                createVC.item = selectedItem
             }
         }
     }
+}
+
+extension BucketListItemViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as? BucketListItemCollectionViewCell else { return UICollectionViewCell()}
+        
+        cell.item = items[indexPath.item]
+        
+        return cell
+    }
+}
+
+extension BucketListItemViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.selectedItem = items[indexPath.item]
+        performSegue(withIdentifier: "ItemDetailSegue", sender: collectionView.cellForItem(at: indexPath))
+       }
 }

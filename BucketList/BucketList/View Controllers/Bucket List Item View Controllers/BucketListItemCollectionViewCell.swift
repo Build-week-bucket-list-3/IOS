@@ -17,7 +17,6 @@ class BucketListItemCollectionViewCell: UICollectionViewCell {
     }
     
     @IBOutlet weak var itemLabel: UILabel!
-    @IBOutlet weak var sharedStatusLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
     
     
@@ -25,17 +24,13 @@ class BucketListItemCollectionViewCell: UICollectionViewCell {
         
         guard let item = item else { return }
         
-        itemLabel.text = item.name
+        itemLabel.text = item.itemName
         
-        if item.shareable {
-            sharedStatusLabel.text = "Public"
-        } else {
-            sharedStatusLabel.text = "Private"
-        }
-        
-        if item.photos[0].url != nil {
-            let data = try? Data(contentsOf: item.photos[0].url!)
-            self.photoImageView.image = UIImage(data: data!)
+        if item.photo != nil {
+            if let url = URL(string: item.photo!) {
+                let data = try? Data(contentsOf: url)
+                self.photoImageView.image = UIImage(data: data!)
+            }
         }
     }
 }

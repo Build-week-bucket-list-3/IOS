@@ -1,5 +1,5 @@
 //
-//  BucketListItemCollectionViewController.swift
+//  BucketListItemCollectionView.swift
 //  BucketList
 //
 //  Created by Gi Pyo Kim on 11/20/19.
@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "ItemCell"
 
-class BucketListItemCollectionViewController: UICollectionViewController {
+class BucketListItemCollectionView: UICollectionView {
     
     var bucketListController: BucketListController?
     

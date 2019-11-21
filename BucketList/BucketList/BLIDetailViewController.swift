@@ -11,6 +11,7 @@ import UIKit
 class BLIDetailViewController: UIViewController {
     
     var bucketListController: BucketListController?
+    var bucketList: BucketList?
     var item: BucketListItem?
 
     @IBOutlet weak var addEntryMediaButton: UIButton!
@@ -62,34 +63,34 @@ class BLIDetailViewController: UIViewController {
     
     // MARK: - Navigation
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "EmbeddedCollectionSegue" {
-            if let collectionVC = segue.destination as? MediaCollectionViewController {
-                collectionVC.bucketListController = bucketListController
-                collectionVC.item = item
-            }
-        } else if segue.identifier == "EmbeddedTableSegue" {
-            if let tableVC = segue.destination as? JournalTableViewController {
-                tableVC.bucketListController = bucketListController
-                tableVC.item = item
-            }
-        } else if segue.identifier == "BLIteminfoSegue" {
-            if let infoVC = segue.destination as? BLinfoViewController {
-                infoVC.bucketListController = bucketListController
-                infoVC.bucketListItem = item
-            }
-        } else if segue.identifier == "AddEntrySegue" {
-            if let entryVC = segue.destination as? CreateBucketListItemViewController {
-//                entryVC.bucketListController = bucketListController
-                //                entryVC.item = item also fix downcast ^
-            }
-        } else if segue.identifier == "AddMediaSegue" {
-            if let mediaVC = segue.destination as? BLinfoViewController {
-//                mediaVC.bucketListController = bucketListController
-//                mediaVC.bucketListItem = item
-                //                tableVC.item = item also fix downcast ^
-
-            }
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "EmbeddedCollectionSegue" {
+//            if let collectionVC = segue.destination as? MediaCollectionViewController {
+//                collectionVC.bucketListController = bucketListController
+//                collectionVC.item = item
+//            }
+//        } else if segue.identifier == "EmbeddedTableSegue" {
+//            if let tableVC = segue.destination as? JournalTableViewController {
+//                tableVC.bucketListController = bucketListController
+//                tableVC.item = item
+//            }
+//        } else if segue.identifier == "BLIteminfoSegue" {
+//            if let infoVC = segue.destination as? BLinfoViewController {
+//                infoVC.bucketListController = bucketListController
+//                infoVC.bucketListItem = item
+//            }
+//        } else if segue.identifier == "AddEntrySegue" {
+//            if let entryVC = segue.destination as? CreateBucketListItemViewController {
+////                entryVC.bucketListController = bucketListController
+//                //                entryVC.item = item also fix downcast ^
+//            }
+//        } else if segue.identifier == "AddMediaSegue" {
+//            if let mediaVC = segue.destination as? BLinfoViewController {
+////                mediaVC.bucketListController = bucketListController
+////                mediaVC.bucketListItem = item
+//                //                tableVC.item = item also fix downcast ^
+//
+//            }
+//        }
+//    }
 }
