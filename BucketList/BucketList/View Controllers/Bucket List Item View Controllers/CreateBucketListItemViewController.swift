@@ -9,22 +9,20 @@
 import UIKit
 
 class CreateBucketListItemViewController: UIViewController {
+    
+    var bucketListController: BucketListController?
+    var bucketList: BucketList?
+    
+    @IBOutlet weak var itemNameTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func createButtonTapped(_ sender: UIButton) {
+        guard let name = itemNameTextField.text, !name.isEmpty else { return }
+//        bucketlists/bucketlist/{bucketlistid}/item  call function using this endpoint to create a new item to the bucketlist
     }
-    */
 
 }
