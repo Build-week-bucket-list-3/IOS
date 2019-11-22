@@ -21,6 +21,7 @@ class SignInViewController: UIViewController {
 
         signInButton.layer.cornerRadius = 3.0
         
+        usernameTextField.tintColor = UIColor(cgColor: CGColor(srgbRed: 2.0/255.0, green: 127/255.0, blue: 167/255.0, alpha: 1))
     }
     
     @IBAction func createAccountButton(_ sender: UIButton) {

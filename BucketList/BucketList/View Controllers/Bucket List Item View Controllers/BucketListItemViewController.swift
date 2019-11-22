@@ -47,10 +47,16 @@ class BucketListItemViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
 
+    @IBOutlet weak var createBLItemButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
+        
+        createBLItemButton.layer.cornerRadius = 5
+        createBLItemButton.layer.borderWidth = 2
+        createBLItemButton.layer.borderColor = CGColor(srgbRed: 2.0/255.0, green: 127/255.0, blue: 167/255.0, alpha: 1)
     }
     
     deinit {
