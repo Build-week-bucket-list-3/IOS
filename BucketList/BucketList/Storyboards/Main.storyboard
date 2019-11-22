@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PH5-Rg-eUj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PH5-Rg-eUj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -160,15 +160,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="R9D-np-2Ta">
-                                <rect key="frame" x="20" y="338.5" width="374" height="32"/>
-                                <segments>
-                                    <segment title="Private"/>
-                                    <segment title="Public"/>
-                                </segments>
-                            </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLL-Un-IZ8">
-                                <rect key="frame" x="20" y="755" width="374" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLL-Un-IZ8">
+                                <rect key="frame" x="20" y="742" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.0078431372550000003" green="0.49803921569999998" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Evy-Tb-THs"/>
@@ -179,28 +172,27 @@
                                 </state>
                                 <connections>
                                     <action selector="createAccountButtonTapped:" destination="dGr-ji-aQ0" eventType="touchUpInside" id="Tid-3M-Fwt"/>
-                                    <action selector="createNewBucketList:" destination="FdM-Zf-g4U" eventType="touchUpInside" id="AVT-vy-gAv"/>
+                                    <action selector="createNewBucketList:" destination="FdM-Zf-g4U" eventType="touchUpInside" id="BPb-7N-aqG"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="R9D-np-2Ta" firstAttribute="leading" secondItem="nRs-ll-Sho" secondAttribute="leading" constant="20" id="5zt-at-6xj"/>
                             <constraint firstItem="nRs-ll-Sho" firstAttribute="trailing" secondItem="gqc-tI-7ur" secondAttribute="trailing" constant="20" id="8zP-ns-YTZ"/>
                             <constraint firstItem="goB-oB-afY" firstAttribute="top" secondItem="nRs-ll-Sho" secondAttribute="top" constant="100" id="9X6-ff-cjk"/>
                             <constraint firstItem="nRs-ll-Sho" firstAttribute="trailing" secondItem="goB-oB-afY" secondAttribute="trailing" constant="20" id="Fha-uD-QRw"/>
                             <constraint firstItem="gqc-tI-7ur" firstAttribute="top" secondItem="goB-oB-afY" secondAttribute="bottom" constant="4" id="IcG-lt-D3K"/>
-                            <constraint firstItem="nRs-ll-Sho" firstAttribute="trailing" secondItem="R9D-np-2Ta" secondAttribute="trailing" constant="20" id="QZj-rZ-Fio"/>
+                            <constraint firstItem="dLL-Un-IZ8" firstAttribute="leading" secondItem="nRs-ll-Sho" secondAttribute="leading" constant="20" id="QVG-Of-EFY"/>
                             <constraint firstItem="gqc-tI-7ur" firstAttribute="leading" secondItem="nRs-ll-Sho" secondAttribute="leading" constant="20" id="RaH-8n-wIt"/>
-                            <constraint firstItem="R9D-np-2Ta" firstAttribute="top" secondItem="gqc-tI-7ur" secondAttribute="bottom" constant="40" id="llf-M2-SqI"/>
+                            <constraint firstItem="nRs-ll-Sho" firstAttribute="bottom" secondItem="dLL-Un-IZ8" secondAttribute="bottom" constant="70" id="dDk-vn-8bp"/>
+                            <constraint firstItem="nRs-ll-Sho" firstAttribute="trailing" secondItem="dLL-Un-IZ8" secondAttribute="trailing" constant="20" id="lZf-SJ-EAJ"/>
                             <constraint firstItem="goB-oB-afY" firstAttribute="leading" secondItem="nRs-ll-Sho" secondAttribute="leading" constant="20" id="lqV-Dw-rp6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nRs-ll-Sho"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create a Bucket List" id="kPU-GM-iAz"/>
                     <connections>
-                        <outlet property="nameTextFIeld" destination="gqc-tI-7ur" id="hrl-zP-mUc"/>
-                        <outlet property="shareableSegementedControl" destination="R9D-np-2Ta" id="mtA-Mi-IJ8"/>
+                        <outlet property="nameTextFIeld" destination="gqc-tI-7ur" id="7Tf-lr-am9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B2l-HD-qE1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -231,7 +223,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <state key="normal" title="Create a bucket list item">
-                                            <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" red="0.0075939223170000004" green="0.49731212850000001" blue="0.6491755843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -410,7 +402,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3Q-Hd-JfJ">
                                         <rect key="frame" x="0.0" y="58" width="374" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="nLT-a6-qQQ"/>
                                         </constraints>

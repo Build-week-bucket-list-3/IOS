@@ -42,13 +42,6 @@ class BucketListTableViewCell: UITableViewCell {
         
         nameLabel.text = bucketList.name
         
-//        switch bucketList.shareable {
-//        case true:
-//            shareableLabel.text = "Public"
-//        case false:
-//            shareableLabel.text = "Private"
-//        }
-        
         if !bucketListItems.isEmpty, let imageString = bucketListItems[0].photo, let imageURL = URL(string: imageString) {
             do {
                 let image = try UIImage(withContentsOfURL: imageURL)
