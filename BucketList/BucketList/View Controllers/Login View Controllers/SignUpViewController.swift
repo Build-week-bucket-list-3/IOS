@@ -47,7 +47,8 @@ class SignUpViewController: UIViewController {
             !confirmPassword.isEmpty else { return }
         guard confirmPassword == password else { return }
         
-        let user = User(username: username, password: password, email: email)
+        let user = User(username: username, password: password, email: email, id: nil)
+        
         
         bucketListController.signUp(with: user) { (error) in
             if let error = error {
