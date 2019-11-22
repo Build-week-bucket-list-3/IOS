@@ -104,7 +104,7 @@
                                     <outlet property="blImageView" destination="CxP-NH-e88" id="qrK-W2-7Sa"/>
                                     <outlet property="nameLabel" destination="ADm-Gx-Lnf" id="6uu-WT-ndN"/>
                                     <outlet property="uiView" destination="fkb-VN-dQL" id="acm-R9-cFb"/>
-                                    <segue destination="XDD-Nk-yjO" kind="show" identifier="BLDetailViewSegue" id="un4-0y-NFh"/>
+                                    <segue destination="XDD-Nk-yjO" kind="show" identifier="BLDetailViewSegue" id="RNc-b4-4OB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

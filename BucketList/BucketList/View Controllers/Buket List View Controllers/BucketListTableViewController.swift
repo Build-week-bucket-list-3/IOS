@@ -131,6 +131,7 @@ class BucketListTableViewController: UITableViewController {
             if let bucketListItemVC = segue.destination as? BucketListItemViewController,
                 let indexPath = tableView.indexPathForSelectedRow {
                 bucketListItemVC.bucketList = fetchedResultsController.object(at: indexPath)
+                bucketListItemVC.bucketListController = bucketListController
             }
         }
         

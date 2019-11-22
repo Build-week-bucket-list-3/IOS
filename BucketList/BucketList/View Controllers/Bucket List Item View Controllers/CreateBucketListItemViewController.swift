@@ -27,7 +27,7 @@ class CreateBucketListItemViewController: UIViewController {
     }
     
     @IBAction func createButtonTapped(_ sender: UIButton) {
-        guard let name = itemNameTextField.text, !name.isEmpty, let bucketList = bucketList else { return }
+        guard let name = itemNameTextField.text, !name.isEmpty, let bucketList = bucketList, let bucketListController = bucketListController else { return }
         
         // Need to upload the image to Cloudinary and get URL back
 //        let imageString: String?
@@ -38,7 +38,7 @@ class CreateBucketListItemViewController: UIViewController {
 //
 //        }
             
-        bucketListController?.createBucketListItem(bucketList: bucketList, itemName: name, journalEntry: noteTextField.text, photo: nil)
+        bucketListController.createBucketListItem(bucketList: bucketList, itemName: name, journalEntry: noteTextField.text, photo: nil)
         navigationController?.popViewController(animated: true)
     }
 }
