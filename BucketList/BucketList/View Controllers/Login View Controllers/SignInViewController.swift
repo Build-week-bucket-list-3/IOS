@@ -29,22 +29,32 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func signInButtonTapped(_ sender: UIButton) {
-//        guard let bucketListController = bucketListController else { return }
-//        guard let username = usernameTextField.text,
-//            !username.isEmpty,
-//            let password = passwordTextField.text,
-//            !password.isEmpty else { return }
-//
-//        bucketListController.signIn(with: <#T##User#>, completion: <#T##(Error?) -> ()#>) { (error) in
-//            if let error = error {
-//                print("Error occurred during sign up: \(error)")
-//            } else {
-//                DispatchQueue.main.async {
-//                    self.dismiss(animated: true, completion: nil)
-//                    }
-//                }
-//            }
-        }
+        guard let bucketListController = bucketListController else { return }
+        guard let username = usernameTextField.text,
+            !username.isEmpty,
+            let password = passwordTextField.text,
+            !password.isEmpty else { return }
+        
+        let user = User(username: username, password: password)
+        
+        bucketListController.signIn(with: user, completion: { (error) in
+            if let error = error {
+                print("Error occurred during sign up: \(error)")
+            } else {
+                bucketListController.setUserID(token: bucketListController.bearer!, user: bucketListController.loggedInUser!) { (error) in
+                    if let error = error {
+                        print("Error occurred during sign up: \(error)")
+                    } else {
+                        DispatchQueue.main.async {
+                            self.navigationController?.popToRootViewController(animated: true)
+                        }
+                    }
+                }
+                
+            }
+        })
+        
+    }
     
     
     // MARK: - Navigation

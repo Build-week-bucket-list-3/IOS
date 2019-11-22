@@ -53,27 +53,28 @@ class SignUpViewController: UIViewController {
             if let error = error {
                 print("Error occurred during sign up: \(error)")
             } else {
-                DispatchQueue.main.async {
-                    
-                    let alertController = UIAlertController(title: "Sign Up Successful", message: "Welcome \(user.username)", preferredStyle: .alert)
-                    let alertAction = UIAlertAction(title: "Get Started", style: .default, handler: nil)
-                    alertController.addAction(alertAction)
-                    self.present(alertController, animated: true) {
-                        
+                bucketListController.signIn(with: user, completion: { (error) in
+                    if let error = error {
+                        print("Error occurred during sign up: \(error)")
+                    } else {
+                        bucketListController.setUserID(token: bucketListController.bearer!, user: bucketListController.loggedInUser!) { (error) in
+                            if let error = error {
+                                print("Error occurred during sign up: \(error)")
+                            } else {
+                                DispatchQueue.main.async {
+                                    self.navigationController?.popToRootViewController(animated: true)
+                                    let alertController = UIAlertController(title: "Sign Up Successful", message: "Welcome \(user.username)", preferredStyle: .alert)
+                                    let alertAction = UIAlertAction(title: "Get Started", style: .default, handler: nil)
+                                    alertController.addAction(alertAction)
+                                    self.present(alertController, animated: true) {
+                                        
+                                    }
+                                }
+                            }
+                        }
                     }
-                }
+                })
             }
         }
-        
-//        bucketListController.signIn(username: username, password: password) { (error) in
-//            if let error = error {
-//                print("Error occurred during sign up: \(error)")
-//            } else {
-//                DispatchQueue.main.async {
-//                    self.dismiss(animated: true, completion: nil)
-//                }
-//            }
-//        }
-        
     }
 }
