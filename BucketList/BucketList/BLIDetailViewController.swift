@@ -68,7 +68,7 @@ class BLIDetailViewController: UIViewController {
         } else {
             completedButton.titleLabel?.text = "☑︎ Completed"
         }
-//        bucketListController?.updateBucketListItem(bucketListItem: item, itemName: item?.itemName, journalEntry: item?.journalEntry, photo: nil, completed: !item?.completed, context: <#T##NSManagedObjectContext#>)
+//        bucketListController?.updateBucketListItem(bucketListItem: item, itemName: item?.itemName, journalEntry: item?.journalEntry, photo: nil, completed: !item?.completed, context: CoreDataStack.shared.mainContext)
         item?.completed.toggle()
     }
     
