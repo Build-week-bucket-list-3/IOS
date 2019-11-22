@@ -29,7 +29,7 @@ class BucketListTableViewCell: UITableViewCell {
         "https://images.unsplash.com/photo-1551970353-3960cb854a2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
     ]
     
-    var demoIndex = 0
+    var demoIndex = Int.random(in: 0...5)
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -51,7 +51,7 @@ class BucketListTableViewCell: UITableViewCell {
         
         nameLabel.text = bucketList.name
         
-        if let imageURL = URL(string: demoImages[demoIndex]) {
+        if blImageView.image == nil, let imageURL = URL(string: demoImages[demoIndex]) {
         
             do {
                 let image = try UIImage(withContentsOfURL: imageURL)
@@ -62,7 +62,7 @@ class BucketListTableViewCell: UITableViewCell {
         }
         
         // randomly select image
-        demoIndex = (demoIndex + Int.random(in: 0...5)) % 5
+        demoIndex = Int.random(in: 0...5)
     }
 }
 
