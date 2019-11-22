@@ -65,10 +65,10 @@ class BucketListTableViewController: UITableViewController {
         menuView.layer.shadowRadius = 5
         
         // Create a Bucket List Button setup
-        createABucketListButton.backgroundColor = .clear
+        
         createABucketListButton.layer.cornerRadius = 5
         createABucketListButton.layer.borderWidth = 2
-        createABucketListButton.layer.borderColor = CGColor(srgbRed: 2, green: 127, blue: 167, alpha: 1)
+        createABucketListButton.layer.borderColor = CGColor(srgbRed: 2.0/255.0, green: 127/255.0, blue: 167/255.0, alpha: 1)
         
         tableView.reloadData()
     }
