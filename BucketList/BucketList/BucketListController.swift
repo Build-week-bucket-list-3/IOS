@@ -138,12 +138,16 @@ class BucketListController {
             
             let decoder = JSONDecoder()
             do {
-                let allUsers = try decoder.decode([User].self, from: data)
-                for u in allUsers {
-                    if u.username == user.username {
-                        self.loggedInUser?.id = u.id
+                let allUsersDict = try decoder.decode([String: [User]].self, from: data)
+                
+                if let allUsers = allUsersDict["user"] {
+                    for u in allUsers {
+                        if u.username == user.username {
+                            self.loggedInUser?.id = u.id
+                        }
                     }
                 }
+
             } catch {
                 print("Error decoding bearer object: \(error)")
                 completion(error)

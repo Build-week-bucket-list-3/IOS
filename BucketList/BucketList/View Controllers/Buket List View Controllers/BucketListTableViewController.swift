@@ -75,8 +75,16 @@ class BucketListTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableView.reloadData()
         
+        bucketListController.fetchAllBucketListsFromServer { (error) in
+            if let error = error {
+                NSLog("Error fetching all bucket lists from server: \(error)")
+                return
+            }
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
     
     // MARK: - Table view data source
@@ -123,6 +131,7 @@ class BucketListTableViewController: UITableViewController {
             if let bucketListItemVC = segue.destination as? BucketListItemViewController,
                 let indexPath = tableView.indexPathForSelectedRow {
                 bucketListItemVC.bucketList = fetchedResultsController.object(at: indexPath)
+                bucketListItemVC.bucketListController = bucketListController
             }
         }
         

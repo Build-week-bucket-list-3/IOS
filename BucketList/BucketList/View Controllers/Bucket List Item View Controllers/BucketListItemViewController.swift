@@ -30,7 +30,7 @@ class BucketListItemViewController: UIViewController {
             NSSortDescriptor(key: "itemName", ascending: true)
         ]
         
-        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataStack.shared.mainContext, sectionNameKeyPath: "itemName", cacheName: nil)
+        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataStack.shared.mainContext, sectionNameKeyPath: nil, cacheName: nil)
         
         frc.delegate = self
         
@@ -237,7 +237,8 @@ extension BucketListItemViewController: UICollectionViewDataSource, NSFetchedRes
 
 extension BucketListItemViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.selectedItem = items[indexPath.item]
-        performSegue(withIdentifier: "ItemDetailSegue", sender: collectionView.cellForItem(at: indexPath))
+        // TODO: Need to delete items array and fetch from core data
+//        self.selectedItem = items[indexPath.item]
+//        performSegue(withIdentifier: "ItemDetailSegue", sender: collectionView.cellForItem(at: indexPath))
        }
 }
