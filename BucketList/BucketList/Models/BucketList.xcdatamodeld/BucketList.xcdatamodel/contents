@@ -15,7 +15,7 @@
         <attribute name="photo" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="BucketList" positionX="-54" positionY="-9" width="128" height="103"/>
-        <element name="BucketListItem" positionX="-36" positionY="36" width="128" height="133"/>
+        <element name="BucketList" positionX="-36" positionY="9" width="128" height="103"/>
+        <element name="BucketListItem" positionX="0" positionY="72" width="128" height="133"/>
     </elements>
 </model>

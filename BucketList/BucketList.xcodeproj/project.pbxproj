@@ -29,7 +29,7 @@
 		A69896532385E5C800D6459A /* BucketListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69896522385E5C800D6459A /* BucketListTableViewCell.swift */; };
 		A69896552385F9C900D6459A /* BucketListItemCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69896542385F9C900D6459A /* BucketListItemCollectionViewController.swift */; };
 		A698965723872E8900D6459A /* BucketListItem+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = A698965623872E8900D6459A /* BucketListItem+Convenience.swift */; };
-		A698965C23875E1800D6459A /* BucketList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A698965923875D7F00D6459A /* BucketList.xcdatamodeld */; };
+		A69896612387A6A900D6459A /* BucketList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A698965D2387A5C400D6459A /* BucketList.xcdatamodeld */; };
 		A6FD02E023831006007F0DB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD02DF23831006007F0DB7 /* AppDelegate.swift */; };
 		A6FD02E223831006007F0DB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD02E123831006007F0DB7 /* SceneDelegate.swift */; };
 		A6FD02E723831006007F0DB7 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6FD02E523831006007F0DB7 /* Login.storyboard */; };
@@ -63,7 +63,6 @@
 		953ACEA62384376100C8FA44 /* BucketListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BucketListController.swift; path = BucketList/BucketListController.swift; sourceTree = SOURCE_ROOT; };
 		9540747F23847817002F38FD /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		9561BAA923847DA4009B3F93 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		A669F4E52384B4A200AB3F7E /* BucketList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BucketList.xcdatamodel; sourceTree = "<group>"; };
 		A669F4E72384B5B100AB3F7E /* BucketListItemRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BucketListItemRepresentation.swift; sourceTree = "<group>"; };
 		A669F4ED2384B5CF00AB3F7E /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		A669F4F42385119A00AB3F7E /* BucketListRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListRepresentation.swift; sourceTree = "<group>"; };
@@ -72,8 +71,7 @@
 		A69896522385E5C800D6459A /* BucketListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListTableViewCell.swift; sourceTree = "<group>"; };
 		A69896542385F9C900D6459A /* BucketListItemCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListItemCollectionViewController.swift; sourceTree = "<group>"; };
 		A698965623872E8900D6459A /* BucketListItem+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BucketListItem+Convenience.swift"; sourceTree = "<group>"; };
-		A698965823874ED000D6459A /* BucketList 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "BucketList 2.xcdatamodel"; sourceTree = "<group>"; };
-		A698965A23875D7F00D6459A /* BucketList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BucketList.xcdatamodel; sourceTree = "<group>"; };
+		A698965E2387A5C400D6459A /* BucketList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BucketList.xcdatamodel; sourceTree = "<group>"; };
 		A6FD02DC23831006007F0DB7 /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6FD02DF23831006007F0DB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6FD02E123831006007F0DB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -200,9 +198,8 @@
 		A669F4F22385115700AB3F7E /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				A669F4E42384B4A200AB3F7E /* BucketList2.xcdatamodeld */,
 				A669F4ED2384B5CF00AB3F7E /* CoreDataStack.swift */,
-				A698965923875D7F00D6459A /* BucketList.xcdatamodeld */,
+				A698965D2387A5C400D6459A /* BucketList.xcdatamodeld */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -429,7 +426,7 @@
 				A669F4F52385119A00AB3F7E /* BucketListRepresentation.swift in Sources */,
 				953ACE9F238436EA00C8FA44 /* User.swift in Sources */,
 				A6FD02E223831006007F0DB7 /* SceneDelegate.swift in Sources */,
-				A698965C23875E1800D6459A /* BucketList.xcdatamodeld in Sources */,
+				A69896612387A6A900D6459A /* BucketList.xcdatamodeld in Sources */,
 				953ACE822383230A00C8FA44 /* SignUpViewController.swift in Sources */,
 				A669F4F7238511EB00AB3F7E /* BucketList+Convenience.swift in Sources */,
 				A6FD031723845205007F0DB7 /* NetworkingHelpers.swift in Sources */,
@@ -645,23 +642,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A669F4E42384B4A200AB3F7E /* BucketList2.xcdatamodeld */ = {
+		A698965D2387A5C400D6459A /* BucketList.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A698965823874ED000D6459A /* BucketList 2.xcdatamodel */,
-				A669F4E52384B4A200AB3F7E /* BucketList.xcdatamodel */,
+				A698965E2387A5C400D6459A /* BucketList.xcdatamodel */,
 			);
-			currentVersion = A698965823874ED000D6459A /* BucketList 2.xcdatamodel */;
-			path = BucketList2.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		A698965923875D7F00D6459A /* BucketList.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A698965A23875D7F00D6459A /* BucketList.xcdatamodel */,
-			);
-			currentVersion = A698965A23875D7F00D6459A /* BucketList.xcdatamodel */;
+			currentVersion = A698965E2387A5C400D6459A /* BucketList.xcdatamodel */;
 			path = BucketList.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
