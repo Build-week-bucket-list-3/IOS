@@ -19,7 +19,7 @@ extension BucketListItem {
     }
     
     
-    @discardableResult convenience init(id: Int32? = nil, itemName: String, journalEntry: String? = nil, photo: String? = nil, completed: Bool = false, bucketID: Int32, context: NSManagedObjectContext) {
+    @discardableResult convenience init(id: Int32?, itemName: String, journalEntry: String? = "", photo: String? = "", completed: Bool = false, bucketID: Int32, context: NSManagedObjectContext) {
         self.init(context: context)
         self.id = id ?? -1
         self.itemName = itemName
