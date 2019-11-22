@@ -26,7 +26,6 @@
 		A669F4F52385119A00AB3F7E /* BucketListRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A669F4F42385119A00AB3F7E /* BucketListRepresentation.swift */; };
 		A669F4F7238511EB00AB3F7E /* BucketList+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = A669F4F6238511EB00AB3F7E /* BucketList+Convenience.swift */; };
 		A69896532385E5C800D6459A /* BucketListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69896522385E5C800D6459A /* BucketListTableViewCell.swift */; };
-		A69896552385F9C900D6459A /* BucketListItemCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69896542385F9C900D6459A /* BucketListItemCollectionViewController.swift */; };
 		A698965723872E8900D6459A /* BucketListItem+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = A698965623872E8900D6459A /* BucketListItem+Convenience.swift */; };
 		A698965C23875E1800D6459A /* BucketList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A698965923875D7F00D6459A /* BucketList.xcdatamodeld */; };
 		A6FD02E023831006007F0DB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD02DF23831006007F0DB7 /* AppDelegate.swift */; };
@@ -40,7 +39,6 @@
 		A6FD030A23834750007F0DB7 /* BucketListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD030923834750007F0DB7 /* BucketListItemViewController.swift */; };
 		A6FD030D23834784007F0DB7 /* CreateBucketListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD030C23834784007F0DB7 /* CreateBucketListItemViewController.swift */; };
 		A6FD03112383CD03007F0DB7 /* BLIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD03102383CD03007F0DB7 /* BLIDetailViewController.swift */; };
-		A6FD03132383D325007F0DB7 /* JournalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD03122383D325007F0DB7 /* JournalTableViewController.swift */; };
 		A6FD03152383D333007F0DB7 /* MediaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD03142383D333007F0DB7 /* MediaCollectionViewController.swift */; };
 		A6FD031723845205007F0DB7 /* NetworkingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FD031623845205007F0DB7 /* NetworkingHelpers.swift */; };
 /* End PBXBuildFile section */
@@ -68,7 +66,6 @@
 		A669F4F42385119A00AB3F7E /* BucketListRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListRepresentation.swift; sourceTree = "<group>"; };
 		A669F4F6238511EB00AB3F7E /* BucketList+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BucketList+Convenience.swift"; sourceTree = "<group>"; };
 		A69896522385E5C800D6459A /* BucketListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListTableViewCell.swift; sourceTree = "<group>"; };
-		A69896542385F9C900D6459A /* BucketListItemCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListItemCollectionViewController.swift; sourceTree = "<group>"; };
 		A698965623872E8900D6459A /* BucketListItem+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BucketListItem+Convenience.swift"; sourceTree = "<group>"; };
 		A698965823874ED000D6459A /* BucketList 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "BucketList 2.xcdatamodel"; sourceTree = "<group>"; };
 		A698965A23875D7F00D6459A /* BucketList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BucketList.xcdatamodel; sourceTree = "<group>"; };
@@ -85,7 +82,6 @@
 		A6FD030923834750007F0DB7 /* BucketListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListItemViewController.swift; sourceTree = "<group>"; };
 		A6FD030C23834784007F0DB7 /* CreateBucketListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateBucketListItemViewController.swift; path = "BucketList/View Controllers/Bucket List Item View Controllers/CreateBucketListItemViewController.swift"; sourceTree = SOURCE_ROOT; };
 		A6FD03102383CD03007F0DB7 /* BLIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BLIDetailViewController.swift; path = BucketList/BLIDetailViewController.swift; sourceTree = SOURCE_ROOT; };
-		A6FD03122383D325007F0DB7 /* JournalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JournalTableViewController.swift; path = BucketList/JournalTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		A6FD03142383D333007F0DB7 /* MediaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MediaCollectionViewController.swift; path = BucketList/MediaCollectionViewController.swift; sourceTree = SOURCE_ROOT; };
 		A6FD031623845205007F0DB7 /* NetworkingHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkingHelpers.swift; path = BucketList/NetworkingHelpers.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -268,9 +264,7 @@
 				A6FD030923834750007F0DB7 /* BucketListItemViewController.swift */,
 				A6FD030C23834784007F0DB7 /* CreateBucketListItemViewController.swift */,
 				A6FD03102383CD03007F0DB7 /* BLIDetailViewController.swift */,
-				A6FD03122383D325007F0DB7 /* JournalTableViewController.swift */,
 				A6FD03142383D333007F0DB7 /* MediaCollectionViewController.swift */,
-				A69896542385F9C900D6459A /* BucketListItemCollectionViewController.swift */,
 				952B33B423860E420009D6ED /* BucketListItemCollectionViewCell.swift */,
 			);
 			path = "Bucket List Item View Controllers";
@@ -421,7 +415,6 @@
 				A6FD030523834700007F0DB7 /* BucketListTableViewController.swift in Sources */,
 				953ACE97238364E000C8FA44 /* BLshareViewController.swift in Sources */,
 				953ACEA12384370600C8FA44 /* Bearer.swift in Sources */,
-				A69896552385F9C900D6459A /* BucketListItemCollectionViewController.swift in Sources */,
 				A6FD02E023831006007F0DB7 /* AppDelegate.swift in Sources */,
 				A669F4F52385119A00AB3F7E /* BucketListRepresentation.swift in Sources */,
 				953ACE9F238436EA00C8FA44 /* User.swift in Sources */,
@@ -432,7 +425,6 @@
 				A6FD031723845205007F0DB7 /* NetworkingHelpers.swift in Sources */,
 				A6FD03112383CD03007F0DB7 /* BLIDetailViewController.swift in Sources */,
 				953ACE95238364DA00C8FA44 /* BLinfoViewController.swift in Sources */,
-				A6FD03132383D325007F0DB7 /* JournalTableViewController.swift in Sources */,
 				953ACEA72384376100C8FA44 /* BucketListController.swift in Sources */,
 				A69896532385E5C800D6459A /* BucketListTableViewCell.swift in Sources */,
 				A669F4EE2384B5CF00AB3F7E /* CoreDataStack.swift in Sources */,

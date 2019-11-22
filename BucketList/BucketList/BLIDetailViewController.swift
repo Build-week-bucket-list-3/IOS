@@ -63,25 +63,25 @@ class BLIDetailViewController: UIViewController {
     }
     
     @IBAction func completedTapped(_ sender: UIButton) {
+        guard let bucketListController = bucketListController, let item = item, let itemName = item.itemName else { return }
+        
         if completedButton.titleLabel?.text == "☑︎ Completed" {
             completedButton.titleLabel?.text = "☐ Completed"
         } else {
             completedButton.titleLabel?.text = "☑︎ Completed"
         }
-//        bucketListController?.updateBucketListItem(bucketListItem: item, itemName: item?.itemName, journalEntry: item?.journalEntry, photo: nil, completed: !item?.completed, context: CoreDataStack.shared.mainContext)
-        item?.completed.toggle()
+        bucketListController.updateBucketListItem(bucketListItem: item, itemName: itemName, journalEntry: item.journalEntry, photo: item.photo, completed: !(item.completed), context: CoreDataStack.shared.mainContext)
     }
     
     @IBAction func saveChangesTapped(_ sender: UIButton) {
-        guard let newName = nameTextField.text, !newName.isEmpty, let bucketListController = bucketListController else { return }
+        guard let item = item, let newName = nameTextField.text, !newName.isEmpty, let bucketListController = bucketListController else { return }
         
-//        bucketListController.updateBucketListItem(bucketListItem: item, itemName: newName, journalEntry: noteTextField.text, photo: nil, completed: itemCompleted, context: <#T##NSManagedObjectContext#>)
-        item?.itemName = newName
-        item?.journalEntry = noteTextField.text
+        bucketListController.updateBucketListItem(bucketListItem: item, itemName: newName, journalEntry: noteTextField.text, photo: item.photo, completed: item.completed, context: CoreDataStack.shared.mainContext)
     }
     
     @IBAction func deleteButtonTapped(_ sender: UIButton) {
-//        bucketListController?.deleteBucketListItem(bucketListItem: item, context: <#T##NSManagedObjectContext#>)
+        guard let bucketListController = bucketListController, let item = item else { return }
+        bucketListController.deleteBucketListItem(bucketListItem: item, context: CoreDataStack.shared.mainContext)
     }
     
     func updateViews() {
