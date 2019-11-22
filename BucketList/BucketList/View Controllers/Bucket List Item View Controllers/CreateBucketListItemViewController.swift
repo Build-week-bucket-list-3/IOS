@@ -14,15 +14,29 @@ class CreateBucketListItemViewController: UIViewController {
     var bucketList: BucketList?
     
     @IBOutlet weak var itemNameTextField: UITextField!
-
+    @IBOutlet weak var noteTextField: UITextField!
+    @IBOutlet weak var itemImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     
-    @IBAction func createButtonTapped(_ sender: UIButton) {
-        guard let name = itemNameTextField.text, !name.isEmpty else { return }
-//        bucketlists/bucketlist/{bucketlistid}/item  call function using this endpoint to create a new item to the bucketlist
+    @IBAction func addPhotoButtonTapped(_ sender: UIButton) {
+        
     }
-
+    
+    @IBAction func createButtonTapped(_ sender: UIButton) {
+        guard let name = itemNameTextField.text, !name.isEmpty, let bucketList = bucketList else { return }
+        
+        var imageString: String?
+        if let image = itemImageView.image {
+            if let data = image.pngData() {
+                let url = URL(dataRepresentation: data, relativeTo: <#T##URL?#>)
+            }
+           
+        }
+            
+        bucketListController?.createBucketListItem(bucketList: bucketList, itemName: name, journalEntry: noteTextField.text, photo: imageString)
+    }
 }
