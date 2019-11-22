@@ -29,13 +29,13 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func signInButtonTapped(_ sender: UIButton) {
-        guard let bucketListController = bucketListController else { return }
-        guard let username = usernameTextField.text,
-            !username.isEmpty,
-            let password = passwordTextField.text,
-            !password.isEmpty else { return }
-        
-//        bucketListController.signIn(username: username, password: password) { (error) in
+//        guard let bucketListController = bucketListController else { return }
+//        guard let username = usernameTextField.text,
+//            !username.isEmpty,
+//            let password = passwordTextField.text,
+//            !password.isEmpty else { return }
+//
+//        bucketListController.signIn(with: <#T##User#>, completion: <#T##(Error?) -> ()#>) { (error) in
 //            if let error = error {
 //                print("Error occurred during sign up: \(error)")
 //            } else {

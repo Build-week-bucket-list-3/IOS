@@ -29,14 +29,15 @@ class CreateBucketListItemViewController: UIViewController {
     @IBAction func createButtonTapped(_ sender: UIButton) {
         guard let name = itemNameTextField.text, !name.isEmpty, let bucketList = bucketList else { return }
         
-        var imageString: String?
+        let imageString: String?
         if let image = itemImageView.image {
             if let data = image.pngData() {
-                let url = URL(dataRepresentation: data, relativeTo: <#T##URL?#>)
+//                let url = URL(dataRepresentation: data, relativeTo: <#T##URL?#>)
             }
            
         }
             
-        bucketListController?.createBucketListItem(bucketList: bucketList, itemName: name, journalEntry: noteTextField.text, photo: imageString)
+        bucketListController?.createBucketListItem(bucketList: bucketList, itemName: name, journalEntry: noteTextField.text, photo: nil)
+        navigationController?.popViewController(animated: true)
     }
 }
