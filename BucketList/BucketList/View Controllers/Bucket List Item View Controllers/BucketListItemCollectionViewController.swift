@@ -11,11 +11,19 @@
 //private let reuseIdentifier = "ItemCell"
 //
 //class BucketListItemCollectionView: UICollectionView {
+<<<<<<< HEAD
 //    
 //    var bucketListController: BucketListController?
 //    
 //    var bucketList: BucketList?
 //    
+=======
+//
+//    var bucketListController: BucketListController?
+//
+//    var bucketList: BucketList?
+//
+>>>>>>> develop2
 //    var items: [BucketListItem]?
 //
 //    override func viewDidLoad() {
@@ -38,10 +46,17 @@
 //
 //    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 //        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? BucketListItemCollectionViewCell else { return UICollectionViewCell() }
+<<<<<<< HEAD
 //        
 //        let item = bucketList?.items?.items[indexPath.row]
 //        cell.item = item
 //        
+=======
+//
+//        let item = bucketList?.items?.items[indexPath.row]
+//        cell.item = item
+//
+>>>>>>> develop2
 //        return cell
 //    }
 //

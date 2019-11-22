@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class BucketListItemViewController: UIViewController {
     
@@ -14,10 +15,28 @@ class BucketListItemViewController: UIViewController {
     
     var bucketList: BucketList? {
         didSet {
-            // fetchitems()
             self.title = bucketList?.name
         }
     }
+    
+    lazy var fetchedResultsController: NSFetchedResultsController<BucketListItem> = {
+        
+        let fetchRequest: NSFetchRequest<BucketListItem> = BucketListItem.fetchRequest()
+        fetchRequest.sortDescriptors = [
+            NSSortDescriptor(key: "itemName", ascending: true)
+        ]
+        
+        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataStack.shared.mainContext, sectionNameKeyPath: "itemName", cacheName: nil)
+        
+        frc.delegate = self
+        
+        do {
+            try frc.performFetch()
+        } catch {
+            fatalError("Error performing fetch for frc: \(error)")
+        }
+        return frc
+    }()
     
     var items: [BucketListItem] = []
     var selectedItem: BucketListItem?
@@ -41,7 +60,7 @@ class BucketListItemViewController: UIViewController {
         } else if segue.identifier == "EditInfoSegue" {
             if let infoVC = segue.destination as? CreateBucketListViewController {
                 infoVC.bucketListController = bucketListController
-                infoVC.bucketList = bucketList
+//                infoVC.bucketList = bucketList
             }
         } else if segue.identifier == "ItemDetailSegue" {
             if let createVC = segue.destination as? BLIDetailViewController {
@@ -53,19 +72,25 @@ class BucketListItemViewController: UIViewController {
     }
 }
 
-extension BucketListItemViewController: UICollectionViewDataSource {
+extension BucketListItemViewController: UICollectionViewDataSource, NSFetchedResultsControllerDelegate {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        fetchedResultsController.sections?.count ?? 0
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+        return fetchedResultsController.sections?[section].numberOfObjects ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as? BucketListItemCollectionViewCell else { return UICollectionViewCell()}
         
-        cell.item = items[indexPath.item]
+        cell.item = fetchedResultsController.object(at: indexPath)
         
         return cell
     }
+    
+    
 }
 
 extension BucketListItemViewController: UICollectionViewDelegate {

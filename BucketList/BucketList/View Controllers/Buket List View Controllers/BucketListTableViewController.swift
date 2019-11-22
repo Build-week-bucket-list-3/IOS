@@ -45,8 +45,7 @@ class BucketListTableViewController: UITableViewController {
         super.viewDidAppear(animated)
         
         if bucketListController.bearer == nil {
-            // TODO: Verify segue identifier
-            // performSegue(withIdentifier: "LoginSegue", sender: self)
+            performSegue(withIdentifier: "LogInSegue", sender: self)
             
         } else {
             DispatchQueue.main.async {
@@ -102,8 +101,7 @@ class BucketListTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
-            // call BucketListController's delete method
+            bucketListController.deleteBucketList(bucketList: fetchedResultsController.object(at: indexPath), context: CoreDataStack.shared.mainContext)
             
         }
     }
@@ -124,8 +122,7 @@ class BucketListTableViewController: UITableViewController {
         } else if segue.identifier == "BLDetailViewSegue" {
             if let bucketListItemVC = segue.destination as? BucketListItemViewController,
                 let indexPath = tableView.indexPathForSelectedRow {
-                // TODO: check if BucketListItemViewController has bucketList variable
-                // bucketListItemVC.bucketList = fetchedResultsController.object(at: indexPath)
+                bucketListItemVC.bucketList = fetchedResultsController.object(at: indexPath)
             }
         }
         
